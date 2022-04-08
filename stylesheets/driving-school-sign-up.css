@@ -1,0 +1,36 @@
+.signup-form{
+	width: 350px;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.signup-form h1{
+	text-align: center;
+	font-size: 30px;
+}
+
+.signup-form input[type=text], input[type=password]{
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+.signup-form input[type=submit]{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.signup-form .second-row a{
+	float: right;
+}
+
+.signup-form .second-row input[type=checkbox]{
+	float: left;
+}
+
+.signup-form .third-row{
+	text-align: center;
+}

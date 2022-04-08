@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>Driving School - Login Page</title>
-	<link rel = "stylesheet" type = "text/css" href = "stylessheets/driving-school-login.css" />
+	<link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-login.css" />
 </head>
 <body>
 	<div class = "login-form">
@@ -22,14 +22,14 @@
 		
 		<section class = "second-row">
 			<input type = "checkbox" id = "showPassword"><label for = "show-password">Show Password</label>
-			<a href = "#">Forgot Password</a>
+			<a href = "driving-school-login-forgot-password.php">Forgot Password</a>
 		</section>
 		
 		<section class = "third-row">
-			<p>Don't have an account? <a href = "#">Sign Up</a> here!</p>
+			<p>Don't have an account? <a href = "driving-school-sign-up.php">Sign Up</a> here!</p>
 		</section>
 	</div>
 	
-	<script src = "scripts/app.js"></script>
+	<script src = "scripts/driving-school-login.js"></script>
 </body>
 </html>
