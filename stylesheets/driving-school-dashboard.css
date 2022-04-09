@@ -9,7 +9,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #dfdddd;
+    background-color: #f5f1f1;
 }
 
 li {
@@ -23,6 +23,8 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
+    transition: 0.5s;
+    border-radius: 10px;
 }
 
 li a:hover {
@@ -49,7 +51,7 @@ li a:hover {
     height: 300px;
     border-radius: 10px;
     transition: 0.5s;
-    background-color: #dfdddd;
+    background-color: #f5f1f1;
     text-align: center;
 }
 
