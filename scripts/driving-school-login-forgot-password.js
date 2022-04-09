@@ -93,6 +93,8 @@ function validateForm(){
 		loginConfirmPass.style.border = "1px solid red";
 		errorConfirmPass.style.color = "red";
 		error = true;
+	}else{
+		equal.innerHTML = "";
 	}
 
 	if(error){
