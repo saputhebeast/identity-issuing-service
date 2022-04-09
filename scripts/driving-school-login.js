@@ -17,6 +17,7 @@ function validateForm(){
 	let password = document.forms["login-form"]["password"].value;;
 	let messagePass = document.getElementById("error-pass");
 	let messageEmail = document.getElementById("error-email");
+	
 	// https://stackoverflow.com/questions/65801147/validate-email-pattern-with-regex
 	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

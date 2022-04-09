@@ -13,3 +13,7 @@ clicked.addEventListener("click", function(){
 		conPass.type = "password";
 	}
 });
+
+function validateForm(){
+	
+}

@@ -12,7 +12,7 @@
 	<div class = "forgot-pass-form">
 		<section class = "first-row">
 			<h1>Forgot Password</h1>
-			<form action = "#" method = "POST">
+			<form action = "#" name="forgot-pass-form" onsubmit = "return validateForm()" method = "POST">
 				<input type = "text" placeholder = "Enter the email address" name = "email"/><br>
 				<input type = "password" placeholder = "Enter the new password" name = "new-password" id = "new-password"/><br>
 				<input type = "password" placeholder = "Confirm the new password" name = "confirm-password" id = "confirm-password"/><br>
