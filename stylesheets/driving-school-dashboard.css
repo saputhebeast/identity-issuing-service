@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dfdddd;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color: rgba(160, 63, 63, 0.2);
+}
+
+/* container */
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.container{
+    padding-top: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.column {
+    margin: 10px;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 300px;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: #dfdddd;
+    text-align: center;
+}
+
+.column:hover{
+    box-shadow: 0 0 20px 0px rgba(160, 63, 63, 0.2);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column .content{
+    padding-top: 25%;
+}
+
+/* .column-1{
+    background-color: red;
+}
+
+.column-2{
+    background-color: green;
+}
+
+.column-3{
+    background-color: purple;
+}
+
+.column-4{
+    background-color: yellow;
+}
+
+.column-5{
+    background-color: pink;
+}
+
+.column-6{
+    background-color: blue;
+} */
