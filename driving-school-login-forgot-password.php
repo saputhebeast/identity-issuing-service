@@ -11,11 +11,15 @@
 <body>
 	<div class = "forgot-pass-form">
 		<section class = "first-row">
-			<h1>Forgot Password</h1>
-			<form action = "#" name="forgot-pass-form" onsubmit = "return validateForm()" method = "POST">
-				<input type = "text" placeholder = "Enter the email address" name = "email"/><br>
-				<input type = "password" placeholder = "Enter the new password" name = "new-password" id = "new-password"/><br>
-				<input type = "password" placeholder = "Confirm the new password" name = "confirm-password" id = "confirm-password"/><br>
+			<h1>Forgot Password- Driving School Account</h1>
+			<form action = "driving-school-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
+				<input type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
+				<p id="error-email"></p>
+				<input type = "password" placeholder = "Enter the new password" name = "password" id = "pass"/><br>
+				<p id="error-pass"></p>
+				<input type = "password" placeholder = "Confirm the new password" name = "confirm-password" id = "confirm-pass"/><br>
+				<p id="error-confirm-pass"></p>
+				<p id = "equality"></p>
 				<input type = "submit" value = "Change the Password" />
 			</form>
 		</section>

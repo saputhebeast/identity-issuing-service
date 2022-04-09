@@ -13,8 +13,8 @@ clicked.addEventListener("click", function(){
 
 
 function validateForm(){
-	let email = document.forms["login-form"]["email"].value;;
-	let password = document.forms["login-form"]["password"].value;;
+	let email = document.forms["login-form"]["email"].value;
+	let password = document.forms["login-form"]["password"].value;
 	let messagePass = document.getElementById("error-pass");
 	let messageEmail = document.getElementById("error-email");
 	
