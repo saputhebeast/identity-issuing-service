@@ -1,9 +1,5 @@
 /* container */
-* {
-    box-sizing: border-box;
-}
 
-/* Create three equal columns that floats next to each other */
 .container{
     padding-top: 110px;
     padding-left: 200px;
@@ -72,7 +68,7 @@ i{
 
 #count{
     color: red;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .fa-solid{

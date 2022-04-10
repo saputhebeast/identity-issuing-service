@@ -9,6 +9,8 @@
     <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-dashboard.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-navigation.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-main.css"/>
+    <?php include 'includes/google-font.php';?>
 </head>
 <body>
     <div class = "navigation">

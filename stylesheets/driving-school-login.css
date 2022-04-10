@@ -1,12 +1,17 @@
+.first-row, .second-row, .third-row{
+	padding-bottom: 10px;
+}
+
 .login-form{
 	width: 350px;
-	top: 30%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
 }
 
 .login-form h1{
+	padding-bottom: 20px;
 	text-align: center;
 	font-size: 30px;
 }
@@ -14,7 +19,7 @@
 .login-form input[type=text], input[type=password]{
 	padding: 15px;
 	margin-bottom: 10px;
-	width: 90%;
+	width: 100%;
 }
 
 .login-form input[type=submit]{

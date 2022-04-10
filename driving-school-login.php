@@ -8,27 +8,28 @@
 <head>
 	<title>Driving School - Login Page</title>
 	<link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-login.css" />
+	<link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-main.css"/>
 </head>
 <body>
 	<div class = "login-form">
 		<section class = "first-row">
 			<h1>Log In- Driving School Account</h1>
 			<form name = "login-form" action = "driving-school-login-check.php" onsubmit = "return validateForm();" method = "POST">
-					<input type = "text" placeholder = "Enter the email address" name = "email" id="login-email"/><br>
-					<p id="error-email"></p>
-					<input type = "password" placeholder = "Enter the password" name = "password" id = "login-password"/><br>
-					<p id="error-pass"></p>
-					<input type = "submit" value = "Log In"/>
+					<input class="inputField" type = "text" placeholder = "Enter the email address" name = "email" id="login-email"/><br>
+					<p class = "error-message" id="error-email"></p>
+					<input class="inputField" type = "password" placeholder = "Enter the password" name = "password" id = "login-password"/><br>
+					<p class = "error-message" id="error-pass"></p>
+					<input class="inputField btn" type = "submit" value = "Log In"/>
 			</form>
 		</section>
 		
 		<section class = "second-row">
-			<input type = "checkbox" id = "showPassword"><label for = "show-password">Show Password</label>
-			<a href = "driving-school-login-forgot-password.php">Forgot Password</a>
+			<input type = "checkbox" id = "showPassword"><label for = "show-password"><span class="space"></span>Show Password</label>
+			<a class = "main-page-links" href = "driving-school-login-forgot-password.php">Forgot Password</a>
 		</section>
 		
 		<section class = "third-row">
-			<p>Don't have an account? <a href = "driving-school-sign-up.php">Sign Up</a> here!</p>
+			<p>Don't have an account? <a class = "main-page-links" href = "driving-school-sign-up.php">Sign Up</a> here!</p>
 		</section>
 	</div>
 
