@@ -28,12 +28,8 @@
                     <td>LKR: 15000</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
                     <td>
-                        <form action="#">
-                            <input type="submit" value="Edit"/>
-                        </form>
-                        <form action="#">
-                            <input type="submit" value="Delete"/>
-                        </form>
+                        <a href="driving-school-package-manage-edit.php">Edit</a>
+                        <a href="">Delete</a>
                     </td>
                 </tr>
                 <tr>
@@ -41,12 +37,8 @@
                     <td>LKR: 20000</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
                     <td>
-                        <form action="#">
-                            <input type="submit" value="Edit"/>
-                        </form>
-                        <form action="#">
-                            <input type="submit" value="Delete"/>
-                        </form>
+                        <a href="driving-school-package-manage-edit.php">Edit</a>
+                        <a href="">Delete</a>
                     </td>
                 </tr>
                 <tr>
@@ -54,12 +46,8 @@
                     <td>LKR: 25000</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
                     <td>
-                        <form action="#">
-                            <input type="submit" value="Edit"/>
-                        </form>
-                        <form action="#">
-                            <input type="submit" value="Delete"/>
-                        </form>
+                        <a href="driving-school-package-manage-edit.php">Edit</a>
+                        <a href="">Delete</a>
                     </td>
                 </tr>
             </table>
