@@ -1,3 +1,6 @@
+<?php 
+
+?>
 <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-navigation.css"/>
 <div class = "navigation">
     <ul class = "nav-links">
