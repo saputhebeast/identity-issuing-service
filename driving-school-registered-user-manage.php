@@ -13,36 +13,40 @@
 <body>
     <?php include 'includes/navigation.php'?>
     <div class="container">
-        <h1>Registered User Manage</h1>
+        <h1 class="dashboard-table-heading">Registered User Manage</h1>
         <div class="user-container">
-            <table border="1">
-                <tr>
-                    <th>Student ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Phone Number</th>
-                    <th>Manage</th>
-                </tr>
-                <tr>
-                    <td>1243</td>
-                    <td>John Doe</td>
-                    <td>Colombo 10</td>
-                    <td>07654321432</td>
-                    <td>
-                        <a href="driving-school-registered-user-schedule.php?ID=1243">Schedule</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1244</td>
-                    <td>Peter Parker</td>
-                    <td>Colombo 7</td>
-                    <td>0764354790</td>
-                    <td>
-                        <a href="driving-school-registered-user-schedule.php?ID=1244">Schedule</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1243</td>
+                        <td>John Doe</td>
+                        <td>Colombo 10</td>
+                        <td>07654321432</td>
+                        <td>
+                            <a class = "a-btn btn-warning" href="driving-school-registered-user-schedule.php?ID=1243">Schedule</a>
+                            <a class = "a-btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1244</td>
+                        <td>Peter Parker</td>
+                        <td>Colombo 7</td>
+                        <td>0764354790</td>
+                        <td>
+                            <a class = "a-btn btn-warning" href="driving-school-registered-user-schedule.php?ID=1244">Schedule</a>
+                            <a class = "a-btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

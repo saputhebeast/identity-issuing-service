@@ -14,7 +14,7 @@
     <?php include 'includes/navigation.php'?>
     <div class="container">
         <div class="setting-container">
-            <h1>Profile Settings</h1>
+            <h1 class="dashboard-table-heading">Profile Settings</h1>
             
         </div>
     </div>

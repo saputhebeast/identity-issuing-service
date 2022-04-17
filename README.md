@@ -1,6 +1,6 @@
 # Driving License Management System
 
-“DLMS” (Driving License Management System) is an online driving license issuing service. This system helps customers get their license easier and faster, and driving school owners can advertise their course among the customers by posting classes in the courses section.
+"DLMS" (Driving License Management System) is an online driving license issuing service. This system helps customers get their license easier and faster, and driving school owners can advertise their course among the customers by posting classes in the courses section.
 
 When a guest user visits the website, the homepage is displayed. The default language is “English,” and the currency is in Sri Lankan Rupees. If users want to change language, they can change according to their wishes. 
 
@@ -8,4 +8,4 @@ The homepage displays login methods such as user login, admin login, and driving
 
 Admin user has control of all the functionalities in the system. He can examine all the ongoing changes in the system, and he/she can accept or reject them by checking with the system standards, rules, and regulations. For example, they can register a new user to obtain a new license by clarifying the user details or reject a learner’s company that is requesting the membership of DLMS with admin authority for their section. Moreover, they can update the system, record all the payment details and make reports of the information. After that admin can make further decisions by incorporating with other agents.
 
-Learner’s advertising admin is responsible for all the advertising purposes, mainly for leaners advertisements and other essential advertisements related to the website. They are also eligible for student registrations for driving schools and make necessary payments from students known for driving school registrations. Also, they are responsible for scheduling the timetables for classes and publishing notices related to driving schools.
+Learner’s advertising admin is responsible for all the advertising purposes, mainly for leaner's advertisements and other essential advertisements related to the website. They are also eligible for student registrations for driving schools and make necessary payments from students known for driving school registrations. Also, they are responsible for scheduling the timetables for classes and publishing notices related to driving schools.

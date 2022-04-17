@@ -14,53 +14,61 @@
 <body>
     <?php include 'includes/navigation.php'?>
     <div class="container">
-        <h1>Driving School Package Manage</h1>
+        <h1 class="dashboard-table-heading">Driving School Package Manage</h1>
         <div class="table-container">
-            <table border="1" style="width: 100%;">
-                <tr>
-                    <th>Package</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                    <th>Manage</th>
-                </tr>
-                <tr>
-                    <td>Light- Weight Vehicle</td>
-                    <td>LKR: 15000</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
-                    <td>
-                        <a href="driving-school-package-manage-edit.php">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Heavy- Weight Vehicle</td>
-                    <td>LKR: 20000</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
-                    <td>
-                        <a href="driving-school-package-manage-edit.php">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Light/Heavy- Weight Vehicle</td>
-                    <td>LKR: 25000</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
-                    <td>
-                        <a href="driving-school-package-manage-edit.php">Edit</a>
-                        <a href="">Delete</a>
-                    </td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Light- Weight Vehicle</td>
+                        <td>LKR: 15000</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
+                        <td>
+                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
+                            <a class = "a-btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Heavy- Weight Vehicle</td>
+                        <td>LKR: 20000</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
+                        <td>
+                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
+                            <a class = "a-btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Light/Heavy- Weight Vehicle</td>
+                        <td>LKR: 25000</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
+                        <td>
+                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
+                            <a class = "a-btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
-    <div class="container">
-        <h1>Add New Package</h1>
+    <div id = "heading2" class="container">
+        <h1 class="dashboard-table-heading">Add New Package</h1>
         <div class="add-package-container">
             <form action="#">
-                <input type="text" placeholder="Enter Package Name"/><br>
-                <input type="text" placeholder="Enter Package Price"/><br>
-                <input type="type" placeholder="Enter Package Description"/><br>
-                <input type="submit" value="Add Package">
+                <div class="first-row">
+                    <input class = "inputField" type="text" placeholder="Enter Package Name"/><br>
+                    <input class = "inputField" type="text" placeholder="Enter Package Price"/><br>
+                    <textarea class = "inputField" rows="4" cols="50" placeholder="Enter Package Description"></textarea><br>
+                </div>
+                <div class="second-row">
+                    <input class="inputField btn" type="submit" value="Add Package">
+                </div>
             </form>
         </div>
     </div>

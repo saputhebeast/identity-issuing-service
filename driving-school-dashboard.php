@@ -54,7 +54,7 @@
             <div class="column column-6">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-pen fa-2x"></i>
-                    <h1><a href="#" class="underline-animation">Profile Manage</a></h1>
+                    <h1><a href="driving-school-package-manage.php#heading2" class="underline-animation">Add Package</a></h1>
                 </div>
             </div>
         </div>
