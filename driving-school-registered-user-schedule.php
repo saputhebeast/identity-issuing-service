@@ -13,26 +13,94 @@
 </head>
 <body>
     <?php include 'includes/navigation.php'?>
+    <div class="bg-blur"></div>
     <div class="container">
         <h1 class="dashboard-table-heading">Registered User Schedule</h1>
         <div class="schedule-container">
             <div class="basic-information">
-                <h2>Student Registration Number: </h2>
-                <h2>Name: </h2>
-                <h2>Address: </h2>
-                <h2>Contact Number: </h2>
-                <h2>Courses: </h2>
+                <p>Student Registration Number: </p>
+                <p>Name: </p>
+                <p>Address: </p>
+                <p>Contact Number: </p>
+                <p>Courses: </p>
             </div>
             <div class="classes">
-                <h2>Schedule Classes</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aliquid cum ullam pariatur incidunt cupiditate adipisci aliquam, doloribus aut, quasi corrupti placeat velit tempore reprehenderit amet beatae magni explicabo dicta?</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, nemo voluptatem? Earum alias deleniti excepturi porro molestiae quisquam, voluptate, nisi iure aut fugiat non delectus assumenda aspernatur eius, facere in?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, eaque porro. Labore sapiente nostrum ex. Magnam consequuntur laudantium suscipit natus assumenda voluptates quo harum tempora voluptatum! Voluptatibus fuga incidunt laborum!</p>
-            </div>
-            <div class="schedule-class">
-                
+                <h2>Scheduled Sessions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Starting Time</th>
+                            <th>Ending Time</th>
+                            <th>Manage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1243</td>
+                            <td>John Doe</td>
+                            <td>Colombo 10</td>
+                            <td>
+                                <button class="a-btn btn-warning" onclick="openForm()">Edit</button>
+                                <div class="form-popup" id="myForm">
+                                    <form action="" method = "POST" class="form-container">
+                                        <div class="first-row">
+                                            <h1>Edit- Scheduled Session</h1>
+                                        </div>
+                                        <p>Enter Date:</p>
+                                        <div class="date-time">
+                                            <input type="date" min="2022-05-01">
+                                        </div>
+                                        <p>Enter Starting Time:</p>
+                                        <div class="date-time">
+                                            <input type="time">
+                                        </div>
+                                        <p>Enter Ending Time:</p>
+                                        <div class="date-time">
+                                            <input type="time">
+                                        </div>
+                                        <div class="third-row">
+                                            <button type="submit" class="a-btn btn-warning">Change</button>
+                                            <button type="button" class="a-btn btn-danger" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- <a class = "a-btn btn" href="">Edit</a> -->
+                                <a class = "a-btn btn-danger" href="">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="schedule-class">
+            <h1 class="dashboard-table-heading">Add a Session</h1>
+            <form action="" method="POST">
+                <p>Enter Date:</p>
+                <div class="date-time">
+                    <input type="date" min="2022-05-01">
+                </div>
+                <p>Enter Starting Time:</p>
+                <div class="date-time">
+                    <input type="time">
+                </div>
+                <p>Enter Ending Time:</p>
+                <div class="date-time">
+                    <input type="time">
+                </div>
+                <input class="inputField btn-warning" type="submit" value="Make the Appointment">
+            </form>
+        </div>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 </body>
 </html>

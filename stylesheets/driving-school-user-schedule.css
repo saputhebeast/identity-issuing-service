@@ -1,3 +1,75 @@
 .basic-information{
-    color: red;
+    padding-bottom: 20px;
+}
+
+.classes{
+    padding-bottom: 20px;
+}
+
+.classes h2{
+    padding-bottom: 10px;
+}
+
+.schedule-class{
+    width: 600px;
+    padding-bottom: 50px;
+    padding-top: -200px;
+}
+
+.schedule-class input[type=submit]{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+/* schedule classes */
+.date-time{
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+}
+
+input[type=date], input[type=time] {
+    appearance: none;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+
+    flex: 1;
+    padding: 0 5px;
+    color: black;
+    background-color: rgb(243, 217, 217);
+    cursor: pointer; 
+}
+
+/* pop up */
+/* The popup form - hidden by default */
+.form-popup {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* styling pop up */
+.form-container h1{
+    text-align: center;
+}
+
+.first-row, .second-row, .third-row{
+    padding-bottom: 20px;
 }

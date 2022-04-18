@@ -32,17 +32,10 @@
                         <td>Colombo 10</td>
                         <td>07654321432</td>
                         <td>
-                            <a class = "a-btn btn-warning" href="driving-school-registered-user-schedule.php?ID=1243">Schedule</a>
-                            <a class = "a-btn btn-danger" href="">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1244</td>
-                        <td>Peter Parker</td>
-                        <td>Colombo 7</td>
-                        <td>0764354790</td>
-                        <td>
-                            <a class = "a-btn btn-warning" href="driving-school-registered-user-schedule.php?ID=1244">Schedule</a>
+                            <a class = "a-btn btn-warning" href="driving-school-registered-user-schedule.php">Schedule</a>
+                            
+                            
+                            
                             <a class = "a-btn btn-danger" href="">Delete</a>
                         </td>
                     </tr>
@@ -50,5 +43,11 @@
             </table>
         </div>
     </div>
+    <style>
+
+    </style>
+    <script>
+        
+    </script>
 </body>
 </html>

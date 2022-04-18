@@ -31,25 +31,21 @@
                         <td>LKR: 15000</td>
                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
                         <td>
-                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
-                            <a class = "a-btn btn-danger" href="">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Heavy- Weight Vehicle</td>
-                        <td>LKR: 20000</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
-                        <td>
-                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
-                            <a class = "a-btn btn-danger" href="">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Light/Heavy- Weight Vehicle</td>
-                        <td>LKR: 25000</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
-                        <td>
-                            <a class = "a-btn btn-warning" href="driving-school-package-manage-edit.php">Edit</a>
+                            <button class="a-btn btn-warning" onclick="openForm()">Edit</button>
+                            <div class="form-popup update-package-container" id="myForm">
+                                <form action="" method = "POST" class="form-container">
+                                    <div class="first-row">
+                                        <input class = "inputField" type="text" placeholder="Enter Package Name"/><br>
+                                        <input class = "inputField" type="text" placeholder="Enter Package Price"/><br>
+                                        <textarea class = "inputField" rows="4" cols="50" placeholder="Enter Package Description"></textarea><br>
+                                    </div>
+                                    <div class="second-row">
+                                        <button type="submit" class="a-btn btn-warning">Update</button>
+                                        <button type="button" class="a-btn btn-danger" onclick="closeForm()">Close</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- <a class = "a-btn btn-warning" href="">Edit</a> -->
                             <a class = "a-btn btn-danger" href="">Delete</a>
                         </td>
                     </tr>
@@ -72,5 +68,40 @@
             </form>
         </div>
     </div>
+    <style>
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 400px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* styling pop up */
+        .form-container h1{
+            text-align: center;
+        }
+
+        .first-row, .second-row, .third-row{
+            padding-bottom: 20px;
+        }
+    </style>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 </body>
 </html>
