@@ -1,0 +1,15 @@
+.setting-container{
+	width: 500px;
+}
+
+input[type=text], input[type=password]{
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+input[type=submit]{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 10px;
+}
