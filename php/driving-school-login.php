@@ -4,25 +4,29 @@
 		header('Location: ./driving-school-dashboard.php');
 	}
 ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
 	<title>Driving School - Login Page</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/driving-school-login.css" />
 	<link rel = "stylesheet" type = "text/css" href = "../css/driving-school-main.css"/>
+	<?php 
+		if(isset($_SESSION['error-style'])){
+			echo "<style>.sec1{border: 1px solid red;}</style>";
+		}
+	?>
 </head>
 <body>
 	<div class = "login-form">
 		<section class = "first-row">
 			<h1>Log In- Driving School Account</h1>
 			<form name = "login-form" action = "../php/driving-school-login-check.php" onsubmit = "return validateForm();" method = "POST">
-					<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['login-error']))?'Invalid Login Credentials!':''; ?></p>
-					<input class="inputField" type = "text" placeholder = "Enter the email address" name = "email" id="login-email"/><br>
-					<p class = "error-message" id="error-email"></p>
-					<input class="inputField" type = "password" placeholder = "Enter the password" name = "password" id = "login-password"/><br>
-					<p class = "error-message" id="error-pass"></p>
-					<input class="inputField btn" type = "submit" value = "Log In" name = "logInBtn"/>
+				<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['login-error']))?$_SESSION['login-error']:''; ?></p>
+				<input class="inputField sec1" type = "text" placeholder = "Enter the email address" name = "email" id="login-email"/><br>
+				<p class = "error-message" id="error-email"></p>
+				<input class="inputField sec1" type = "password" placeholder = "Enter the password" name = "password" id = "login-password"/><br>
+				<p class = "error-message" id="error-pass"></p>
+				<input class="inputField btn" type = "submit" value = "Log In" name = "logInBtn"/>
 			</form>
 		</section>
 		
