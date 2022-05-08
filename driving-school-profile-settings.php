@@ -15,7 +15,7 @@
     <?php include 'includes/navigation.php'?>
     <div class="container">
         <div class="setting-container">
-            <h1 class="dashboard-table-heading">Profile Settings</h1>
+            <h1 class="dashboard-table-heading">Basic Information</h1>
             <form class = "" action = "" name = "update-account-form" method = "POST">
 				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name"/><br>
 				<p class = "error-message" id="error-school-name"></p>
@@ -29,6 +29,26 @@
 				<p class = "error-message" id="error-confirm-password"></p>
 				<p class = "error-message" id = "error-pass-mismatch"></p>
 				<input class="inputField btn"  type = "submit" value = "Update Profile" />
+			</form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="setting-container">
+            <h1 class="dashboard-table-heading">Change Password</h1>
+            <form class = "" action = "" name = "update-account-form" method = "POST">
+				<input class="inputField" type = "password" placeholder = "Old Password"/><br>
+                <input class="inputField" type = "password" placeholder = "New Password"/><br>
+                <input class="inputField" type = "password" placeholder = "Confirm New Password"/><br>
+				<input class="inputField btn"  type = "submit" value = "Change Password" />
+			</form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="setting-container">
+            <h1 class="dashboard-table-heading">Delete Account</h1>
+            <form class = "" action = "" name = "update-account-form" method = "POST">
+				<input type="checkbox" name="" id=""> Once you delete the account, there is no going back. Please be certain.<br>
+				<input class="inputField btn-danger"  type = "submit" value = "Delete Account" />
 			</form>
         </div>
     </div>
