@@ -7,12 +7,12 @@
     <title>Driving School - Profile Settings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-main.css"/>
-    <link rel = "stylesheet" type = "text/css" href = "stylesheets/driving-school-profile-settings.css"/>
-    <?php include 'includes/google-font.php';?>
+    <link rel = "stylesheet" type = "text/css" href = "../css/driving-school-main.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "../css/driving-school-profile-settings.css"/>
+    <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include 'includes/navigation.php'?>
+    <?php include '../includes/navigation.php'?>
     <div class="container">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Basic Information</h1>
