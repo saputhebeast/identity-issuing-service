@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+if(isset($_SESSION['username'])){
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -97,3 +98,8 @@
     <script src = "../js/driving-school-registered-user-schedule.js"></script>
 </body>
 </html>
+<?php 
+    }else{
+        header('Location: ../index.php');
+    }
+?>

@@ -39,3 +39,7 @@
 .login-form .third-row{
 	text-align: center;
 }
+
+.login-invalid{
+	color: red;
+}

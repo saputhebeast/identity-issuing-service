@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    if(isset($_SESSION['username'])){
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -42,3 +43,8 @@
     </div>
 </body>
 </html>
+<?php     
+    }else{
+        header('Location: ../index.php');
+    }
+?>

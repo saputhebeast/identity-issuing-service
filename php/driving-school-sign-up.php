@@ -1,5 +1,8 @@
 <?php
-	
+	session_start();
+	if(isset($_SESSION['username'])){
+		header('Location: ./driving-school-dashboard.php');
+	}
 ?>
 
 <!DOCTYPE HTML>
@@ -13,7 +16,7 @@
 <div class = "signup-form">
 		<section class = "first-row">
 			<h1>Sign Up- Driving School</h1>
-			<form action = "../php/driving-school-sign-check.php" name = "create-account-form" onsubmit = "return validateForm();" method = "POST">
+			<form action = "../php/driving-school-sign-up-check.php" name = "create-account-form" onsubmit = "return validateForm();" method = "POST">
 				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name"/><br>
 				<p class = "error-message" id="error-school-name"></p>
 				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>

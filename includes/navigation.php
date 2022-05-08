@@ -8,6 +8,6 @@
         <li><a href="../php/driving-school-package-manage.php">Package Manage</a></li>
         <li><a href="../php/driving-school-registered-user-manage.php">Registered User Manage</a></li>
         <li><a href="../php/driving-school-profile-settings.php">Profile Settings</a></li>
-        <li style="float:right"><a href="#">Log Out</a></li>
+        <li style="float:right"><a href="../php/driving-school-logout.php">Log Out</a></li>
     </ul>
 </div>
