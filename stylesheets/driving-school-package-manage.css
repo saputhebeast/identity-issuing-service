@@ -23,3 +23,8 @@
 	margin-bottom: 10px;
 	width: 100%;
 }
+
+/* https://stackoverflow.com/questions/2610497/change-a-html5-inputs-placeholder-color-with-css */
+input[placeholder], [placeholder], *[placeholder], textarea::placeholder{
+	font-size: 15px;
+}
