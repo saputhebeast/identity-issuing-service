@@ -11,12 +11,12 @@ clicked.addEventListener("click", function(){
 	}
 });
 
-
 function validateForm(){
 	let email = document.forms["login-form"]["email"].value;
 	let password = document.forms["login-form"]["password"].value;
 	let messagePass = document.getElementById("error-pass");
 	let messageEmail = document.getElementById("error-email");
+	let messageLogin = document.getElementById("error-login");
 	
 	// https://stackoverflow.com/questions/65801147/validate-email-pattern-with-regex
 	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -58,6 +58,12 @@ function validateForm(){
 		loginPass.style.border = "1px solid green";
 		messagePass.style.color = "";
 	}
+
+	// if(msg === 'error'){
+	// 	messageLogin.innerHTML = "Invalid Login Credentials!";
+	// 	messageLogin.style.color = "red";
+	// 	error = true;
+	// }
 
 	if(error){
 		return false;
