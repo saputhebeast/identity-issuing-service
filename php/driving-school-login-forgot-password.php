@@ -17,6 +17,7 @@
 		<section class = "first-row">
 			<h1>Forgot Password- Driving School Account</h1>
 			<form action = "../php/driving-school-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
+				<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['change-pass-error']))?$_SESSION['change-pass-error']:''; ?></p>
 				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
 				<p class = "error-message" id="error-email"></p>
 				<input class="inputField"  type = "password" placeholder = "Enter the new password" name = "password" id = "pass"/><br>
@@ -24,7 +25,7 @@
 				<input class="inputField"  type = "password" placeholder = "Confirm the new password" name = "confirm-password" id = "confirm-pass"/><br>
 				<p class = "error-message" id="error-confirm-pass"></p>
 				<p class = "error-message" id = "equality"></p>
-				<input class="inputField btn"  type = "submit" value = "Change the Password" />
+				<input class="inputField btn"  type = "submit" value = "Change the Password" name = "btnForPass"/>
 			</form>
 		</section>
 		
