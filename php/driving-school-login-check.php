@@ -18,12 +18,10 @@
 				header('Location: ../php/driving-school-dashboard.php');
 			}else{
 				$_SESSION['login-error'] = 'Invalid Password!'; 
-				$_SESSION['error-style'] = 'error';
 				header('Location: ../php/driving-school-login.php');
 			}
 		}else{
 			$_SESSION['login-error'] = 'Invalid Login Credentials!'; 
-			$_SESSION['error-style'] = 'error';
 			header('Location: ../php/driving-school-login.php');
 		}
 	}else{
