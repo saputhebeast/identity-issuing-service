@@ -28,7 +28,7 @@
 				<input class="inputField"  type = "password" placeholder = "Confirm the password" name = "confirm-password" id = "confirm-password"/><br>
 				<p class = "error-message" id="error-confirm-password"></p>
 				<p class = "error-message" id = "error-pass-mismatch"></p>
-				<input class="inputField btn"  type = "submit" value = "Sign Up" />
+				<input class="inputField btn"  type = "submit" value = "Sign Up" name = "signUpBtn"/>
 			</form>
 		</section>
 		
