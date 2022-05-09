@@ -8,7 +8,7 @@ input[type=text], input[type=password]{
 	width: 100%;
 }
 
-input[type=submit]{
+.setting-container [type=submit]{
 	width: 100%;
 	padding: 15px;
 	margin-bottom: 10px;

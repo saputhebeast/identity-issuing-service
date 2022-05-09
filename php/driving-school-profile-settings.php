@@ -29,6 +29,7 @@
 				<input class="inputField"  type = "password" placeholder = "Confirm the password" name = "confirm-password" id = "confirm-password"/><br>
 				<p class = "error-message" id="error-confirm-password"></p>
 				<p class = "error-message" id = "error-pass-mismatch"></p>
+                <!-- <textarea class = "inputField" id = "package_description" rows="4" cols="50" placeholder="Enter Package Description" name = "package_description"></textarea><br> -->
 				<input class="inputField btn"  type = "submit" value = "Update Profile" />
 			</form>
         </div>
@@ -47,12 +48,13 @@
     <div class="container">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Delete Account</h1>
-            <form class = "" action = "" name = "update-account-form" method = "POST">
-				<input type="checkbox" name="" id=""> Once you delete the account, there is no going back. Please be certain.<br>
-				<input class="inputField btn-danger"  type = "submit" value = "Delete Account" />
+            <form action = "driving-school-account-delete.php" name = "update-account-form" method = "POST">
+				<input type="checkbox" id="deleteAccount" onclick = "showContent()"> Once you delete the account, there is no going back. Please be certain.<br>
+				<input style = "display: none;" class="inputField btn-danger"  id="deleteBtn" type = "submit" value = "Delete Account" name="deleteBtn"/>
 			</form>
         </div>
     </div>
+    <script src="../js/driving-school-profile-settings.js"></script>
 </body>
 </html>
 <?php 
