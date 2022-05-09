@@ -135,3 +135,19 @@ td {
 textarea{
     resize: none;
 }
+
+/* alert box design by using bootstrap danger theme*/
+/* https://gist.github.com/EvanHerman/315952ebf371cb83ee9db6c54499933d */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: #f0bebe;
+    border: 1px solid#ebccd1;
+    color: #a94442;
+}
