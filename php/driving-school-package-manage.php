@@ -1,5 +1,9 @@
 <?php
+
+use LDAP\Result;
+
     session_start();
+    require "../includes/config.php";
     if(isset($_SESSION['username'])){
 ?>
 <!DOCTYPE HTML>
@@ -15,62 +19,73 @@
 <body>
     <?php include '../includes/navigation.php'?>
     <div class="container">
-        <h1 class="dashboard-table-heading">Driving School Package Manage</h1>
+        <h1 class="dashboard-table-heading">Driving School Training Package Manage</h1>
         <div class="table-container">
+            <?php 
+                $id = $_SESSION['school_id'];
+                $sql = "SELECT * FROM Package WHERE school_id = '$id'";
+                $result = $conn->query($sql);
+                if((!empty($result)) && ($result->num_rows > 0)){
+            ?>
             <table>
                 <thead>
                     <tr>
                         <th>Package</th>
                         <th>Price</th>
+                        <th>Duration</th>
                         <th>Description</th>
                         <th>Manage</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php 
+                        while($row = $result->fetch_assoc()){
+                    ?>
                     <tr>
-                        <td>Light- Weight Vehicle</td>
-                        <td>LKR: 15000</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eveniet minima at fugit saepe quas veniam suscipit ut nulla mollitia enim sit nemo alias provident, hic similique consequatur commodi?</td>
+                        <td><?php echo $row['package_name'] ?></td>
+                        <td>LKR: <?php echo $row['package_price'] ?></td>
+                        <td><?php echo $row['duration'] ?></td>
+                        <td><?php echo $row['description'] ?></td>
                         <td>
-                            <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
-                            <button class="a-btn btn-warning" onclick="openForm()">Edit</button>
-                            <div class="form-popup update-package-container" id="myForm">
-                                <form action="" method = "POST" class="form-container">
-                                    <div class="first-row">
-                                        <input class = "inputField" type="text" placeholder="Enter Package Name"/><br>
-                                        <input class = "inputField" type="text" placeholder="Enter Package Price"/><br>
-                                        <textarea class = "inputField" rows="4" cols="50" placeholder="Enter Package Description"></textarea><br>
-                                    </div>
-                                    <div class="second-row">
-                                        <button type="submit" class="a-btn btn-warning">Update</button>
-                                        <button type="button" class="a-btn btn-danger" onclick="closeForm()">Close</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <a class = "a-btn btn-warning" href="">Edit</a> -->
-                            <a class = "a-btn btn-danger" href="">Delete</a>
+                            <form action="./driving-school-package-manage-edit.php?package_id=<?php echo $row['package_id'] ?>" method="POST">
+                                <input class="a-btn btn-warning" type="submit" value="Edit" name = "btnEdit">
+                            </form>
+                            <form action="./driving-school-package-manage-delete.php?package_id=<?php echo $row['package_id'] ?>" method="POST">
+                                <input class="a-btn btn-danger" type="submit" value="Delete" name = "btnDelete">
+                            </form>
                         </td>
                     </tr>
+                    <?php }?>
                 </tbody>
             </table>
+            <?php
+                }else{
+                    echo "<h3 class = 'alert alert-danger'>No packages to show!</h3>";
+                }
+            ?>
         </div>
     </div>
     <div id = "heading2" class="container">
         <h1 class="dashboard-table-heading">Add New Package</h1>
         <div class="add-package-container">
-            <form action="#">
+            <form name = "package-add-form" action = "../php/driving-school-package-manage-add.php" onsubmit = "return validateForm();" method = "POST">
                 <div class="first-row">
-                    <input class = "inputField" type="text" placeholder="Enter Package Name"/><br>
-                    <input class = "inputField" type="text" placeholder="Enter Package Price"/><br>
-                    <textarea class = "inputField" rows="4" cols="50" placeholder="Enter Package Description"></textarea><br>
+                    <input class = "inputField" id = "package_name" type="text" placeholder="Enter Package Name" name = "package_name"/><br>
+                    <p class = "error-message" id = "error-name"></p>
+                    <input class = "inputField" id = "package_price" type="text" placeholder="Enter Package Price" name = "package_price"/><br>
+                    <p class = "error-message" id = "error-price"></p>
+                    <input class = "inputField" id = "package_duration" type = "text" placeholder="Enter Training Duration" name = "package_duration"/><br>
+                    <p class = "error-message" id = "error-duration"></p>
+                    <textarea class = "inputField" id = "package_description" rows="4" cols="50" placeholder="Enter Package Description" name = "package_description"></textarea><br>
+                    <p class = "error-message" id = "error-description"></p>
                 </div>
                 <div class="second-row">
-                    <input class="inputField btn" type="submit" value="Add Package">
+                    <input class="inputField btn" type="submit" value="Add Package" name = "btnAddPkg">
                 </div>
             </form>
         </div>
     </div>
-    <script src = "../js/driving-school-page-manage.js"></script>
+    <script src = "../js/driving-school-package-manage.js"></script>
 </body>
 </html>
 <?php   
