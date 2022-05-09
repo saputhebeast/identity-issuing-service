@@ -15,6 +15,7 @@
 					unset($_SESSION['login-error']);
 				}
 				$_SESSION['username'] = $email;
+				$_SESSION['school_id'] = $data['school_id'];
 				header('Location: ../php/driving-school-dashboard.php');
 			}else{
 				$_SESSION['login-error'] = 'Invalid Password!'; 
