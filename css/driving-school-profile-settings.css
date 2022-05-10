@@ -2,7 +2,7 @@
 	width: 500px;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], textarea{
 	padding: 15px;
 	margin-bottom: 10px;
 	width: 100%;
@@ -16,4 +16,8 @@ input[type=text], input[type=password]{
 
 .invalid-pass{
 	color: red;
+}
+
+input[placeholder], [placeholder], *[placeholder], textarea::placeholder{
+	font-size: 15px;
 }
