@@ -37,11 +37,17 @@
     <div class="container">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Change Password</h1>
-            <form class = "" action = "" name = "update-account-form" method = "POST">
-				<input class="inputField" type = "password" placeholder = "Old Password"/><br>
-                <input class="inputField" type = "password" placeholder = "New Password"/><br>
-                <input class="inputField" type = "password" placeholder = "Confirm New Password"/><br>
-				<input class="inputField btn"  type = "submit" value = "Change Password" />
+            <form name="changePassword" action = "driving-school-change-password.php" onsubmit = "return validatePassChangeForm();" method = "POST">
+                <p class = "error-message invalid-pass"><?php echo isset (($_SESSION['change-error']))?$_SESSION['change-error']:''; ?></p>
+                <input class="inputField" id = "old" type = "password" placeholder = "Old Password" name="currentPassword"/><br>
+                <p class = "error-message" id="error-pass"></p>
+                <input class="inputField" id = "new" type = "password" placeholder = "New Password"/ name="newPassword"><br>
+                <p class = "error-message" id="error-new-pass"></p>
+                <input class="inputField" id = "confirm" type = "password" placeholder = "Confirm New Password" name="confirmNewPassword"/><br>
+                <p class = "error-message" id="error-new-confirm-pass"></p>
+                <p class = "error-message" id="error-not-same"></p>
+                <input class="inputField btn"  type = "submit" value = "Change Password" name="changeBtn"/>
+                <input type = "checkbox" id = "showPassword"><label for = "show-password"><span class="space"></span>Show Password</label>
 			</form>
         </div>
     </div>
