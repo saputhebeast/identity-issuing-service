@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php include '../includes/navigation.php'?>
-    <div class="container">
+    <div class="container" id="basic-information">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Basic Information</h1>
             <form class = "" action = "" name = "update-account-form" method = "POST">
@@ -34,7 +34,7 @@
 			</form>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="change-password">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Change Password</h1>
             <form name="changePassword" action = "driving-school-change-password.php" onsubmit = "return validatePassChangeForm();" method = "POST">
@@ -51,7 +51,7 @@
 			</form>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="delete-account">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Delete Account</h1>
             <form action = "driving-school-account-delete.php" name = "update-account-form" method = "POST">

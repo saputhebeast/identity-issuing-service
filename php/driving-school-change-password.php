@@ -29,7 +29,7 @@
             }else{  
                 // something went wrong
                 $_SESSION['change-error'] = 'Invalid Password!';
-                echo "<script>alert('Invalid Current Password!'); window.location = './driving-school-profile-settings.php'</script>";
+                header("Location: ./driving-school-profile-settings.php");
             }
         }else{
             header("Location: ./driving-school-dashboard.php");
