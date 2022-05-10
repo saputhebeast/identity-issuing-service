@@ -58,14 +58,7 @@ function validateForm(){
 		messagePass.style.color = "";
 	}
 
-	// if(msg === 'error'){
-	// 	messageLogin.innerHTML = "Invalid Login Credentials!";
-	// 	messageLogin.style.color = "red";
-	// 	error = true;
-	// }
-
 	if(error){
 		return false;
 	}
-
 }
