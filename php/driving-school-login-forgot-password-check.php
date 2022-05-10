@@ -1,7 +1,7 @@
 <?php
 	require "../includes/config.php";
 	session_start();
-	if(isset($_SESSION['username'])){
+	if(isset($_SESSION['school_id'])){
 		header('Location: ./driving-school-dashboard.php');
 	}
 	if(isset($_POST['btnForPass'])){

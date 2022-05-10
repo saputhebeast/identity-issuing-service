@@ -1,7 +1,7 @@
 <?php 
     require "../includes/config.php";
     session_start();
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['school_id'])){
         if(isset($_POST['deleteBtn'])){
             $id = $_SESSION['school_id'];
             $sql = "DELETE FROM Driving_School WHERE school_id = '$id'";

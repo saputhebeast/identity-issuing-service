@@ -14,6 +14,11 @@ clicked.addEventListener("click", function(){
 	}
 });
 
+// https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number
+function isNumeric(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 function validateForm(){
 	// get values from input fields
 	let name = document.forms["create-account-form"]["school-name"].value;
@@ -42,7 +47,6 @@ function validateForm(){
 	let error = false;
 
 	// school name validation
-	// all characters should be a-z
 	if (name.length != 0) {
 		errorName.innerHTML = "";
 		schoolName.style.border = "1px solid green";
@@ -53,6 +57,7 @@ function validateForm(){
 		errorName.style.color = "red";
 		error = true;
 	}
+
 	// email validation
 	if(email.length == 0){
 		errorEmail.innerHTML = "Enter Email!";
@@ -69,11 +74,22 @@ function validateForm(){
 		schoolEmail.style.border = "1px solid green";
 		errorEmail.style.color = "";
 	}
+	
 	// phone number validation
 	// all characters should be digits
 	// length should be 10
 	if(phoneNumber.length == 0){
 		errorPhone.innerHTML = "Enter Phone Number!";
+		schoolPhone.style.border = "1px solid red";
+		errorPhone.style.color = "red";
+		error = true;
+	}else if(phoneNumber.length != 10){
+		errorPhone.innerHTML = "Invalid Phone Number!";
+		schoolPhone.style.border = "1px solid red";
+		errorPhone.style.color = "red";
+		error = true;
+	}else if(!isNumeric(phoneNumber)){
+		errorPhone.innerHTML = "Please Enter Digits Only!";
 		schoolPhone.style.border = "1px solid red";
 		errorPhone.style.color = "red";
 		error = true;

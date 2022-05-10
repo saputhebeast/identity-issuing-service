@@ -1,6 +1,12 @@
 <?php
     session_start();
+    require "../includes/config.php";
     if(isset($_SESSION['username'])){
+        $id = $_SESSION['school_id'];
+        $sql = "SELECT * FROM Driving_School WHERE school_id = '$id'";
+        $result = $conn->query($sql);
+        // no need to validate, if there is no user, can't log into the system
+        $userData = $result->fetch_assoc();
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -17,20 +23,18 @@
     <div class="container" id="basic-information">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Basic Information</h1>
-            <form class = "" action = "" name = "update-account-form" method = "POST">
-				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name"/><br>
-				<p class = "error-message" id="error-school-name"></p>
-				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
+            <form action = "driving-school-details-update.php" name = "update-account-form" onsubmit = "return validateUpdate();" method = "POST">
+				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name" value="<?php echo $userData['school_name'];?>"/><br>
+				<p class = "error-message" id="error-name"></p>
+                <input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email" value="<?php echo $userData['email'];?>"/><br>
 				<p class = "error-message" id="error-email"></p>
-				<input class="inputField"  type = "text" placeholder = "Enter the phone number" name = "phone-number" id = "phone-number"/><br>
-				<p class = "error-message" id="error-phone-number"></p>
-				<input class="inputField"  type = "password" placeholder = "Enter the password" name = "password" id = "password"/><br>
-				<p class = "error-message" id="error-password"></p>
-				<input class="inputField"  type = "password" placeholder = "Confirm the password" name = "confirm-password" id = "confirm-password"/><br>
-				<p class = "error-message" id="error-confirm-password"></p>
-				<p class = "error-message" id = "error-pass-mismatch"></p>
-                <!-- <textarea class = "inputField" id = "package_description" rows="4" cols="50" placeholder="Enter Package Description" name = "package_description"></textarea><br> -->
-				<input class="inputField btn"  type = "submit" value = "Update Profile" />
+                <input class="inputField"  type = "text" placeholder = "Enter the phone number" name = "phone-number" id = "phone-number" value="<?php echo $userData['contact'];?>"/><br>
+                <p class = "error-message" id="error-phone"></p>
+                <textarea class = "inputField" id = "school_address" rows="3" cols="50" placeholder="Enter School Address" name = "school_address"><?php echo $userData['address'];?></textarea><br>
+                <p class = "error-message" id="error-address"></p>
+                <textarea class = "inputField" id = "school_description" rows="6" cols="50" placeholder="Enter School Description" name = "school_description"><?php echo $userData['description'];?></textarea><br>
+				<p class = "error-message" id="error-description"></p>
+                <input class="inputField btn"  type = "submit" value = "Update Profile" name="btnUpdate" />
 			</form>
         </div>
     </div>

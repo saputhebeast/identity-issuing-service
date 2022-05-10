@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['school_id'])){
         if(isset($_POST['btnOut'])){
             session_destroy();
             header("Location: ../index.php");

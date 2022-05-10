@@ -2,7 +2,7 @@
     require "../includes/config.php";
     session_start();
 
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['school_id'])){
         if(isset($_POST['btnEditPkg'])){
             $package_name = $_POST['package_name'];
             $package_price = $_POST['package_price'];

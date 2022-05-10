@@ -14,7 +14,7 @@
         // hash the password using default algorithm (current BCRYPT)
         $hashPassword = password_hash($password, PASSWORD_DEFAULT);
         
-        $sql = "INSERT INTO Driving_School VALUES (DEFAULT, '$school_name', '$email', '-', '$hashPassword', '-')";
+        $sql = "INSERT INTO Driving_School(school_id, school_name, email, address, contact, password, description) VALUES (DEFAULT, '$school_name', '$email', '-', $phoneNumber, '$hashPassword', '-')";
 
         if($conn->query($sql) === TRUE){
             echo "<script>alert('Account was created successfully!'); window.location = './driving-school-login.php'</script>";
