@@ -17,7 +17,7 @@ use LDAP\Result;
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div class="container">
         <h1 class="dashboard-table-heading">Driving School Training Package Manage</h1>
         <div class="table-container">
@@ -68,7 +68,7 @@ use LDAP\Result;
     <div id = "heading2" class="container">
         <h1 class="dashboard-table-heading">Add New Package</h1>
         <div class="add-package-container">
-            <form name = "package-add-form" action = "../php/driving-school-package-manage-add.php" onsubmit = "return validateForm();" method = "POST">
+            <form name = "package-add-form" action = "./driving-school-package-manage-add.php" onsubmit = "return validateForm();" method = "POST">
                 <div class="first-row">
                     <input class = "inputField" id = "package_name" type="text" placeholder="Enter Package Name" name = "package_name"/><br>
                     <p class = "error-message" id = "error-name"></p>
@@ -90,6 +90,6 @@ use LDAP\Result;
 </html>
 <?php   
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

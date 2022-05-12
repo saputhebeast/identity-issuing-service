@@ -23,6 +23,6 @@
         }
 
     }else{
-        header('Location: ./index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

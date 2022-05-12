@@ -16,16 +16,16 @@
 				}
 				$_SESSION['username'] = $email;
 				$_SESSION['school_id'] = $data['school_id'];
-				header('Location: ../php/driving-school-dashboard.php');
+				header('Location: ./driving-school-dashboard.php');
 			}else{
 				$_SESSION['login-error'] = 'Invalid Password!'; 
-				header('Location: ../php/driving-school-login.php');
+				header('Location: ./driving-school-login.php');
 			}
 		}else{
 			$_SESSION['login-error'] = 'Invalid Login Credentials!'; 
-			header('Location: ../php/driving-school-login.php');
+			header('Location: ./driving-school-login.php');
 		}
 	}else{
-		header('Location: ../index.php');
+		header('Location: ./driving-school.php');
 	}
 ?>

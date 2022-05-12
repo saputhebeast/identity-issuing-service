@@ -18,9 +18,9 @@
                 echo "<script>alert('Package was not updated successfully!'); window.location = './driving-school-package-manage.php'</script>";
             }
         }else{
-            header('Location: ./php/driving-school-dashboard.php');
+            header('Location: ./driving-school-dashboard.php');
         }
     }else{
-        header("Location: ../index.php");
+        header("Location: ./driving-school.php");
     }
 ?>

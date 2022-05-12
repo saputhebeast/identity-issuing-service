@@ -7,7 +7,7 @@
             $sql = "DELETE FROM Driving_School WHERE school_id = '$id'";
             if($conn->query($sql) === TRUE){
                 session_destroy();
-                echo "<script>alert('Account was deleted successfully!'); window.location = '../index.php'</script>";
+                echo "<script>alert('Account was deleted successfully!'); window.location = './driving-school.php'</script>";
             }else{
                 echo "<script>alert('Account was not deleted successfully!'); window.location = './driving-school-package-manage.php'</script>";
             }
@@ -15,6 +15,6 @@
             header("Location: ./driving-school-dashboard.php");
         }
     }else{
-        header("Location: ../index.php");
+        header("Location: ./driving-school.php");
     }
 ?>

@@ -13,7 +13,7 @@
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div class = "container">
         <div class="row">
             <div class="column column-1">
@@ -64,6 +64,6 @@
 </html>
 <?php 
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

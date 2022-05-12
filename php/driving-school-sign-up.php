@@ -16,7 +16,7 @@
 <div class = "signup-form">
 		<section class = "first-row">
 			<h1>Sign Up- Driving School</h1>
-			<form action = "../php/driving-school-sign-up-check.php" name = "create-account-form" onsubmit = "return validateForm();" method = "POST">
+			<form action = "./driving-school-sign-up-check.php" name = "create-account-form" onsubmit = "return validateForm();" method = "POST">
 				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name"/><br>
 				<p class = "error-message" id="error-school-name"></p>
 				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
@@ -37,7 +37,7 @@
 		</section>
 		
 		<section class = "third-row">
-			<p><a class = "main-page-links" href = "../php/driving-school-login.php">Back to the login page</a></p>
+			<p><a class = "main-page-links" href = "./driving-school-login.php">Back to the login page</a></p>
 		</section>
 	</div>
 	<script src = "../js/driving-school-sign-up.js"></script>

@@ -35,6 +35,6 @@
             header("Location: ./driving-school-dashboard.php");
         }
     }else{
-        header("Location: ../index.php");
+        header("Location: ./driving-school.php");
     }
 ?>

@@ -16,7 +16,7 @@
 	<div class = "forgot-pass-form">
 		<section class = "first-row">
 			<h1>Forgot Password- Driving School Account</h1>
-			<form action = "../php/driving-school-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
+			<form action = "./driving-school-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
 				<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['change-pass-error']))?$_SESSION['change-pass-error']:''; ?></p>
 				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
 				<p class = "error-message" id="error-email"></p>
@@ -34,7 +34,7 @@
 		</section>
 		
 		<section class = "third-row">
-			<p><a class = "main-page-links" href = "../php/driving-school-login.php">Back to the login page</a></p>
+			<p><a class = "main-page-links" href = "./driving-school-login.php">Back to the login page</a></p>
 		</section>
 	</div>
 	

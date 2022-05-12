@@ -22,9 +22,9 @@
 			}
 		}else{
 			$_SESSION['change-pass-error'] = 'Invalid Email!';
-			header('Location: ../php/driving-school-login-forgot-password.php');
+			header('Location: ./driving-school-login-forgot-password.php');
 		}
 	}else{
-		header('Location: ../index.php');
+		header('Location: ./driving-school.php');
 	}
 ?>

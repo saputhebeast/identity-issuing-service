@@ -16,6 +16,6 @@
             header("Location: ./driving-school-package-manage.php");
         }
     }else{
-        header("Location: ../index.php");
+        header("Location: ./driving-school.php");
     }
 ?>

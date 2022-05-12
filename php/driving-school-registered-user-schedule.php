@@ -13,7 +13,7 @@ if(isset($_SESSION['school_id'])){
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div class="bg-blur"></div>
     <div class="container">
         <h1 class="dashboard-table-heading">Registered User Schedule</h1>
@@ -100,6 +100,6 @@ if(isset($_SESSION['school_id'])){
 </html>
 <?php 
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

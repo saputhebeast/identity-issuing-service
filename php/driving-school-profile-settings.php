@@ -19,11 +19,11 @@
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div class="container" id="basic-information">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Basic Information</h1>
-            <form action = "driving-school-details-update.php" name = "update-account-form" onsubmit = "return validateUpdate();" method = "POST">
+            <form action = "./driving-school-details-update.php" name = "update-account-form" onsubmit = "return validateUpdate();" method = "POST">
 				<input class="inputField" type = "text" placeholder = "Enter the driving school name" name = "school-name" id = "school-name" value="<?php echo $userData['school_name'];?>"/><br>
 				<p class = "error-message" id="error-name"></p>
                 <input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email" value="<?php echo $userData['email'];?>"/><br>
@@ -41,7 +41,7 @@
     <div class="container" id="change-password">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Change Password</h1>
-            <form name="changePassword" action = "driving-school-change-password.php" onsubmit = "return validatePassChangeForm();" method = "POST">
+            <form name="changePassword" action = "./driving-school-change-password.php" onsubmit = "return validatePassChangeForm();" method = "POST">
                 <p class = "error-message invalid-pass"><?php echo isset (($_SESSION['change-error']))?$_SESSION['change-error']:''; ?></p>
                 <input class="inputField" id = "old" type = "password" placeholder = "Old Password" name="currentPassword"/><br>
                 <p class = "error-message" id="error-pass"></p>
@@ -58,7 +58,7 @@
     <div class="container" id="delete-account">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Delete Account</h1>
-            <form action = "driving-school-account-delete.php" name = "update-account-form" method = "POST">
+            <form action = "./driving-school-account-delete.php" name = "update-account-form" method = "POST">
 				<input type="checkbox" id="deleteAccount" onclick = "showContent()"> Once you delete the account, there is no going back. Please be certain.<br>
 				<input style = "display: none;" class="inputField btn-danger"  id="deleteBtn" type = "submit" value = "Delete Account" name="deleteBtn"/>
 			</form>
@@ -69,6 +69,6 @@
 </html>
 <?php 
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

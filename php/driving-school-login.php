@@ -15,7 +15,7 @@
 	<div class = "login-form">
 		<section class = "first-row">
 			<h1>Log In- Driving School Account</h1>
-			<form name = "login-form" action = "../php/driving-school-login-check.php" onsubmit = "return validateForm();" method = "POST">
+			<form name = "login-form" action = "./driving-school-login-check.php" onsubmit = "return validateForm();" method = "POST">
 				<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['login-error']))?$_SESSION['login-error']:''; ?></p>
 				<input class="inputField" type = "text" placeholder = "Enter the email address" name = "email" id="login-email"/><br>
 				<p class = "error-message" id="error-email"></p>
@@ -27,14 +27,14 @@
 		
 		<section class = "second-row">
 			<input type = "checkbox" id = "showPassword"><label for = "show-password"><span class="space"></span>Show Password</label>
-			<a class = "main-page-links" href = "driving-school-login-forgot-password.php">Forgot Password</a>
+			<a class = "main-page-links" href = "./driving-school-login-forgot-password.php">Forgot Password</a>
 		</section>
 		
 		<section class = "third-row">
-			<p>Don't have an account? <a class = "main-page-links" href = "../php/driving-school-sign-up.php">Sign Up</a> here!</p>
+			<p>Don't have an account? <a class = "main-page-links" href = "./driving-school-sign-up.php">Sign Up</a> here!</p>
 		</section>
 	</div>
-
+	
 	<script src = "../js/driving-school-login.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div class="container">
         <h1 class="dashboard-table-heading">Registered User Manage</h1>
         <div class="user-container">
@@ -33,7 +33,7 @@
                         <td>Colombo 10</td>
                         <td>07654321432</td>
                         <td>
-                            <a class = "a-btn btn-warning" href="../php/driving-school-registered-user-schedule.php">Schedule</a>
+                            <a class = "a-btn btn-warning" href="./driving-school-registered-user-schedule.php">Schedule</a>
                             <a class = "a-btn btn-danger" href="">Delete</a>
                         </td>
                     </tr>
@@ -45,6 +45,6 @@
 </html>
 <?php     
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>

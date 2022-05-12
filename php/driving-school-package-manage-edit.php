@@ -14,7 +14,7 @@
     <?php include '../includes/google-font.php';?>
 </head>
 <body>
-    <?php include '../includes/navigation.php'?>
+    <?php include '../includes/driving-school-navigation.php'?>
     <div id = "heading2" class="container">
         <h1 class="dashboard-table-heading">Driving School Training Package Edit</h1>
         <div class="add-package-container">
@@ -26,7 +26,7 @@
                     $data = $result->fetch_assoc();
 
             ?>
-                    <form name = "package-add-form" action = "../php/driving-school-package-manage-edit-check.php" onsubmit = "return validateForm();" method = "POST">
+                    <form name = "package-add-form" action = "./driving-school-package-manage-edit-check.php" onsubmit = "return validateForm();" method = "POST">
                         <div class="first-row">
                             <input type="hidden" name="package_id" value="<?php echo $package_id ?>">
                             <input class = "inputField" id = "package_name" type="text" placeholder="Enter Package Name" name = "package_name" value="<?php echo $data['package_name']?>"/><br>
@@ -54,6 +54,6 @@
 </html>
 <?php   
     }else{
-        header('Location: ../index.php');
+        header('Location: ./driving-school.php');
     }
 ?>
