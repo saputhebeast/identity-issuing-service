@@ -33,6 +33,10 @@
 		<section class = "third-row">
 			<p>Don't have an account? <a class = "main-page-links" href = "./driving-school-sign-up.php">Sign Up</a> here!</p>
 		</section>
+
+		<section class = "fourth-row">
+			<a class="a-btn" href="../index.html">Go Back to Home Page</a>
+		</section>
 	</div>
 	
 	<script src = "../js/driving-school-login.js"></script>
