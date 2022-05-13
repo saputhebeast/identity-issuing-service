@@ -3,13 +3,8 @@
     session_start();
 
     if(isset($_SESSION['school_id'])){
-        if(isset($_POST['btnAddPkg'])){
-            $package_name = $_POST['package_name'];
-            $package_price = $_POST['package_price'];
-            $package_duration = $_POST['package_duration'];
-            $package_description = $_POST['package_description'];
-            $school_id = $_SESSION['school_id'];
-
+        if(isset($_POST['btnEditImg'])){
+            $packageID = $_POST['package_id'];
             $target_dir = "../images/driving-school/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
             $uploadOk = 1;
@@ -41,13 +36,14 @@
                 $_SESSION['image-type'] = "Sorry, only JPG, JPEG, PNG files are allowed.";
                 $uploadOk = 0;
             }
+            // echo "./driving-school-package-manage-edit.php?package_id=$packageID";
+            // echo $target_file;
 
             // Check if $uploadOk is set to 1
             if ($uploadOk == 1) {
                 // move the file
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                    $sql = "INSERT INTO Package(package_id, school_id, package_name, package_price, description, duration, image) 
-                    VALUES(DEFAULT, '$school_id', '$package_name', '$package_price', '$package_description', '$package_duration', '$target_file')";
+                    $sql = "UPDATE Package SET image = '$target_file' WHERE package_id = '$packageID'";
                     
                     if($conn->query($sql) === TRUE){
                         unset($_SESSION['image-or-not']);
@@ -56,16 +52,16 @@
                         unset($_SESSION['image-size']);
                         unset($_SESSION['image-error']);
 
-                        echo "<script>alert('Package was added successfully!'); window.location = './driving-school-package-manage.php'</script>";
+                        echo "<script>alert('Package image was updated successfully!'); window.location = './driving-school-package-manage.php'</script>";
                     }else{
-                        echo "<script>alert('Package was not added successfully!'); window.location = './driving-school-package-manage.php'</script>";
+                        echo "<script>alert('Package image was not updated successfully!'); window.location = './driving-school-package-manage.php'</script>";
                     }
                 } else {
                     $_SESSION['image-error'] = "Sorry, there was an error uploading your file.";
-                    header("Location: ./driving-school-package-manage.php");
+                    header("Location: ./driving-school-package-manage-edit.php?package_id=$packageID");
                 }
             }else{
-                header("Location: ./driving-school-package-manage.php");
+                header("Location: ./driving-school-package-manage-edit.php?package_id=$packageID");
             }
         }else{
             header('Location: ./driving-school-dashboard.php');

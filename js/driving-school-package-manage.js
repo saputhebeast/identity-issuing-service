@@ -8,16 +8,19 @@ function validateForm(){
 	let package_price = document.forms["package-add-form"]["package_price"].value;
     let package_duration = document.forms["package-add-form"]["package_duration"].value;
 	let package_description = document.forms["package-add-form"]["package_description"].value;
+	let package_image = document.getElementById("package_image");
 
     let messageName = document.getElementById("error-name");
 	let messagePrice = document.getElementById("error-price");
     let messageDuration = document.getElementById("error-duration");
     let messageDescription = document.getElementById("error-description");
+	let messageImage = document.getElementById("error-image");
     
     let addName = document.getElementById("package_name");
     let addPrice = document.getElementById("package_price");
     let addDuration = document.getElementById("package_duration");
     let addDescription = document.getElementById("package_description");
+	let addImage = document.getElementById("package_image");
 
     let error = false;
 
@@ -78,9 +81,46 @@ function validateForm(){
 		addDescription.style.border = "1px solid green";
 		messageDescription.style.color = "";
 	}
+
+	// validation of file
+	if(package_image.files.length == 0){
+		messageImage.innerHTML = "Upload Image!";
+		messageImage.style.color = "red";
+		addImage.border = "1px solid red";
+		error = true;
+	}else{
+		messageImage.innerHTML = "";
+		messageImage.style.color = "";
+		addImage.border = "1px solid green";
+	}
     
 
     if(error){
         return false;
     }
+}
+
+
+function validateImageForm(){
+	let package_image = document.getElementById("package_image");
+	let messageImage = document.getElementById("error-image");
+	let addImage = document.getElementById("package_image");
+
+	let error = false;
+
+	// validation of file
+	if(package_image.files.length == 0){
+		messageImage.innerHTML = "Upload Image!";
+		messageImage.style.color = "red";
+		addImage.border = "1px solid red";
+		error = true;
+	}else{
+		messageImage.innerHTML = "";
+		messageImage.style.color = "";
+		addImage.border = "1px solid green";
+	}
+
+	if(error){
+		return false;
+	}
 }

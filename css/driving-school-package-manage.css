@@ -2,10 +2,6 @@
     width: 600px;
 }
 
-.first-row{
-    padding-bottom: 20px;
-}
-
 .add-package-container input[type=text], textarea{
 	padding: 15px;
 	margin-bottom: 10px;
@@ -52,5 +48,47 @@ input[placeholder], [placeholder], *[placeholder], textarea::placeholder{
 }
 
 .first-row, .second-row, .third-row{
+	padding-bottom: 20px;
+}
+
+/* image add button */
+.inputFile::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.inputFile::before {
+	content: 'Add Image';
+	display: inline-block;
+	background-color: rgba(255, 255, 255, .15);  
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, .1);
+    border: none;
+    border-radius: 5px;
+	padding: 5px 8px;
+	outline: none;
+	cursor: pointer;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+#error-upload{
+	color: red;
+}
+
+/* package image */
+#updatePackageImage{
+	width: 540px;
+	height: 540px;
+	border: 2px solid black;
+}
+
+.section{
+	padding-bottom: 30px;
+}
+
+.section input[type=file]{
+	padding-top: 15px;
+}
+
+#update-title{
 	padding-bottom: 20px;
 }
