@@ -29,7 +29,7 @@
             <p>"DLMS" (Driving License Management System) is an online driving license issuing service.<br> 
                 This system helps customers get their license easier and faster, and driving school owners can advertise their course among the<br>
                 customers by posting classes in the courses section.</p>
-            <a href="./html/dlms-about.html" class="hero-btn">Know More</a>
+            <a href="./html/dlms-about.php" class="hero-btn">Know More</a>
         </div>
     </section>
 
@@ -44,7 +44,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
             <div class="course-col">
-                <h2><a href="" class="underline-animation a-remove">Admin Login</a></h2>
+                <h2><a href="./php/admin-login.php" class="underline-animation a-remove">Admin Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
             <div class="course-col">
