@@ -4,7 +4,7 @@ use LDAP\Result;
 
     session_start();
     require "../includes/config.php";
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['school_id'])){
 ?>
 <!DOCTYPE HTML>
 <html>
