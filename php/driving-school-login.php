@@ -35,7 +35,7 @@
 		</section>
 
 		<section class = "fourth-row">
-			<a class="a-btn" href="../index.html">Go Back to Home Page</a>
+			<a class="a-btn" href="../index.php">Go Back to Home Page</a>
 		</section>
 	</div>
 	

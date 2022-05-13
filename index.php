@@ -11,15 +11,16 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="./images/home/logo/DLMS.png" alt=""></a>
+            <a href="index.php"><img src="./images/home/logo/DLMS.png" alt=""></a>
             <div class="nav-links" id="navLinks">
                 <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./html/dlms-about.html">ABOUT</a></li>
-                    <li><a href="./html/dlms-course.html">COURSE</a></li>
-                    <li><a href="./html/dlms-blog.html">BLOG</a></li>
-                    <li><a href="./html/dlms-contact.html">CONTACT</a></li>
-                    <li><a href="./index.html#course">LOGIN</a></li>
+                    <li><a href="./index.php">HOME</a></li>
+                    <li><a href="./index.php#services">SERVICES</a></li>
+                    <li><a href="./php/dlms-about.php">ABOUT</a></li>
+                    <li><a href="./php/dlms-course.php">COURSE</a></li>
+                    <li><a href="./php/dlms-blog.php">BLOG</a></li>
+                    <li><a href="./php/dlms-contact.php">CONTACT</a></li>
+                    <li><a href="./index.php#course">LOGIN</a></li>
                 </ul>
             </div>
         </nav>
@@ -81,7 +82,7 @@
     </section>
 
     <!-- services -->
-    <section class="services">
+    <section class="services" id="services">
         <h1>OUR SERVICES</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi dignissimos sed laboriosam commodi consequuntur est aliquam accusamus? Quae dolorem harum at suscipit eius ex error labore dicta, velit cumque.</p>
         <div class="row">
@@ -111,7 +112,7 @@
             <div class="review-col">
                 <img src="./images/home/review/ameesha.jpg" alt="">
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore laudantium itaque perferendis vitae ducimus maiores, voluptas maxime aliquam dolorum facilis esse. Doloribus, aliquam eligendi architecto cumque dignissimos error repellendus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minus voluptas cum inventore maxime fugit ullam molestiae quidem excepturi corrupti. Cum animi delectus eos a dolorum voluptatem sed tempora quod!</p>
+                    <p>This is the head office or the center of  Motor Traffic Department commonly known as 'license office'. It caters all your needs with regard to obtaining a new driving license or renewing. It's the main hub in the area for issuing license and is quite busy during its working hours. You better know all the details of the work you have to do in order to take the license before coming here.</p>
                     <h3>Ameesha Akalanka</h3>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -123,7 +124,7 @@
             <div class="review-col">
                 <img src="./images/home/review/gayashan.jpg" alt="">
                 <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore laudantium itaque perferendis vitae ducimus maiores, voluptas maxime aliquam dolorum facilis esse. Doloribus, aliquam eligendi architecto cumque dignissimos error repellendus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minus voluptas cum inventore maxime fugit ullam molestiae quidem excepturi corrupti. Cum animi delectus eos a dolorum voluptatem sed tempora quod!</p>
+                    <p>Today my experience was too good. Firstly I did my registration in 22th July & my date was got on 5th August. When I go to RMV and I got my trail date withing one hour. It was a actual improvement of a government departments. When my 1st experience with RMV too much bad. I've in there on 7 am and I got my trail date around 3 pm. "but the main problem is date not givin within a week"</p>
                     <h3>Gayashan Chamikara</h3>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -141,16 +142,6 @@
         <a href="./html/dlms-course.html" class="hero-btn">EXPLORE COURCES</a>
     </section>
 
-    <!-- footer -->
-    <section class="footer">
-        <h4>Connect With Us</h4>
-        <div class="icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-linkedin"></i>
-        </div>
-        <p>Copyright © 2022 DLMS. All Rights Reserved. Designed & Developed by MLBY1S2_8.1_11.</p>
-    </section>
+    <?php include '../includes/footer.php'?>
 </body>
 </html>
