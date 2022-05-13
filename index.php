@@ -140,7 +140,7 @@
     <!-- call to action -->
     <section class="cta">
         <h1>Enroll For Our Partner's Driving School Cources</h1>
-        <a href="./html/dlms-course.html" class="hero-btn">EXPLORE COURCES</a>
+        <a href="./php/dlms-course.php" class="hero-btn">EXPLORE COURCES</a>
     </section>
 
     <?php include './includes/footer.php'?>
