@@ -39,6 +39,6 @@
 		</section>
 	</div>
 	
-	<script src = "../js/driving-school-login.js"></script>
+	<script src = "../js/login.js"></script>
 </body>
 </html>
