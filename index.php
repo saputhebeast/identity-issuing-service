@@ -1,3 +1,4 @@
+<?php  include './includes/remove-session.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,6 +143,6 @@
         <a href="./html/dlms-course.html" class="hero-btn">EXPLORE COURCES</a>
     </section>
 
-    <?php include '../includes/footer.php'?>
+    <?php include './includes/footer.php'?>
 </body>
 </html>

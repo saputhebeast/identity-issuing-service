@@ -1,5 +1,5 @@
+<?php  include '../includes/remove-session.php'?>
 <?php 
-	session_start();
 	if(isset($_SESSION['school_id'])){
 		header('Location: ./driving-school-dashboard.php');
 	}

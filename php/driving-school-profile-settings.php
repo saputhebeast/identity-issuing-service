@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include '../includes/remove-session.php';
     require "../includes/config.php";
     if(isset($_SESSION['username'])){
         $id = $_SESSION['school_id'];
