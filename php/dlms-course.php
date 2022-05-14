@@ -30,56 +30,57 @@
 
     <!-- facilities -->
     <section class="services">
+        <h1>Driving License Management System</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi dignissimos sed laboriosam commodi consequuntur est aliquam accusamus? Quae dolorem harum at suscipit eius ex error labore dicta, velit cumque.</p>
         <div class="row">
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
         </div>
         <div class="row">
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
             <div class="services-col">
-                <img src="../images/driving-school/course/course1.jpg" alt="">
+                <img src="../images/driving-school/Heavy weight vehicles.jpg" alt="">
                 <h3><a href="" class="a-remove">World Class Library</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
                 <form>
-                    <input class="a-btn" type="submit" value="Register">
+                    <input class="btn a-btn" type="submit" value="Register">
                 </form>
             </div>
         </div>
