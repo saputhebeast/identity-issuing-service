@@ -8,6 +8,7 @@
     <title>DLMS</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/dlms-home-main.css">
+    <?php include './includes/google-font.php'?>
 </head>
 <body>
     <section class="header">
@@ -40,11 +41,11 @@
 
         <div class="row">
             <div class="course-col">
-                <h2><a href="" class="underline-animation a-remove">User Login</a></h2>
+                <h2><a href="./php/user.php" class="underline-animation a-remove">User Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
             <div class="course-col">
-                <h2><a href="./php/admin-login.php" class="underline-animation a-remove">Admin Login</a></h2>
+                <h2><a href="./php/admin.php" class="underline-animation a-remove">Admin Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
             <div class="course-col">

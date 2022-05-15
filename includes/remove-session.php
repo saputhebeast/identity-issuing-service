@@ -5,6 +5,10 @@
         unset($_SESSION['login-error']);
     }
 
+    if(isset($_SESSION['change-pass-error'])){
+        unset($_SESSION['change-pass-error']);
+    }
+
     if(isset($_SESSION['image-or-not'])){
         unset($_SESSION['image-or-not']);
     }

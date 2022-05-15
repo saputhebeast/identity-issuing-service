@@ -1,22 +1,22 @@
-<?php 
+<?php
 	session_start();
-	if(isset($_SESSION['school_id'])){
-		header('Location: ./driving-school-dashboard.php');
+	if(isset($_SESSION['user_id'])){
+		header('Location: ./user-dashboard.php');
 	}
 ?>
 
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Driving School - Forgot Password</title>
+	<title>User - Forgot Password</title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/driving-school-login-forgot-password.css" />
 	<link rel = "stylesheet" type = "text/css" href = "../css/driving-school-main.css"/>
 </head>
 <body>
 	<div class = "forgot-pass-form">
 		<section class = "first-row">
-			<h1>Forgot Password- Driving School Account</h1>
-			<form action = "./driving-school-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
+			<h1>Forgot Password- User Account</h1>
+			<form action = "./user-login-forgot-password-check.php" name="forgot-pass-form" onsubmit = "return validateForm();" method = "POST">
 				<p class = "error-message login-invalid" id="error-login"><?php echo isset (($_SESSION['change-pass-error']))?$_SESSION['change-pass-error']:''; ?></p>
 				<input class="inputField"  type = "text" placeholder = "Enter the email address" name = "email" id = "email"/><br>
 				<p class = "error-message" id="error-email"></p>
@@ -34,7 +34,7 @@
 		</section>
 		
 		<section class = "third-row">
-			<p><a class = "main-page-links" href = "./driving-school-login.php">Back to the login page</a></p>
+			<p><a class = "main-page-links" href = "./user-login.php">Back to the login page</a></p>
 		</section>
 	</div>
 	
