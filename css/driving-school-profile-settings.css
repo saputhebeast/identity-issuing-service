@@ -21,3 +21,13 @@ input[type=text], input[type=password], textarea{
 input[placeholder], [placeholder], *[placeholder], textarea::placeholder{
 	font-size: 15px;
 }
+
+span{
+	color: red;
+	font-weight: bold;
+}
+
+.delete-account{
+	padding-top: 10px;
+	padding-bottom: 50px;
+}

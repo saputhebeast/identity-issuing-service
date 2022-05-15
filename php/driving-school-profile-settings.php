@@ -58,8 +58,9 @@
     <div class="container" id="delete-account">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Delete Account</h1>
-            <form action = "./driving-school-account-delete.php" name = "update-account-form" method = "POST">
-				<input type="checkbox" id="deleteAccount" onclick = "showContent()"> Once you delete the account, there is no going back. Please be certain.<br>
+            <span>Keep remember to delete published packages before delete the account!</span>
+            <form class="delete-account" action = "./driving-school-account-delete.php" name = "update-account-form" method = "POST">
+				<input type="checkbox" id="deleteAccount" onclick = "showContent()"> Once you delete the account, there is no going back. Please be certain.
 				<input style = "display: none;" class="inputField btn-danger"  id="deleteBtn" type = "submit" value = "Delete Account" name="deleteBtn"/>
 			</form>
         </div>
