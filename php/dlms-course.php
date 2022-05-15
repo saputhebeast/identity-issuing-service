@@ -1,4 +1,13 @@
-<?php require '../includes/config.php' ?>
+<?php 
+    require '../includes/config.php';
+
+    if(isset($_POST['search-btn'])){
+        $keyword = $_POST['search-text'];
+        $sql = "SELECT D.school_name, D.address, D.contact, D.email, P.package_name, P.package_price, P.description, P.duration, P.image FROM driving_school D, package P WHERE D.school_id = P.school_id AND P.package_name LIKE '%{$keyword}%';";
+    }else{
+        $sql = "SELECT D.school_name, D.address, D.contact, D.email, P.package_name, P.package_price, P.description, P.duration, P.image FROM driving_school D, package P WHERE D.school_id = P.school_id;";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,18 +46,17 @@
 
     <!-- search box -->
     <section class="search">
-        <form>
-            <input type="text" name="search" placeholder="Search Course By Name" class="search-text">
-            <button class="course-search-btn"><i class="fa fa-search fa-2x"></i></button>
+        <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <input type="text" name="search-text" placeholder="Search Course By Name" class="search-text">
+            <button class="course-search-btn" name="search-btn"><i class="fa fa-search fa-2x"></i></button>
         </form>
     </section>
 
     <!-- packages/courses -->
     <section class = "course">
         <?php 
-            $sql = "SELECT D.school_name, D.address, D.contact, D.email, P.package_name, P.package_price, P.description, P.duration, P.image FROM driving_school D, package P WHERE D.school_id = P.school_id;";
             $result = $conn->query($sql);
-            if($result->num_rows > 0 && !empty($result)){
+            if(!empty($result) && $result->num_rows > 0){
                 while($data = $result->fetch_assoc()){
                     ?>
                         <div class="course-row">
