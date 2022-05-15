@@ -40,21 +40,21 @@
                 <div>
                     <i class="fa fa-home"></i>
                     <span>
-                        <h5>XYZ Road, ABC Building</h5>
-                        <p>Battaramulla, Colombo, LK</p>
+                        <h5>Driving License Management System</h5>
+                        <p>Colombo, LK</p>
                     </span>
                 </div>
                 <div>
                     <i class="fa fa-phone"></i>
                     <span>
-                        <h5>+9478965458</h5>
-                        <p>Monday to Saturday, 10AM to 6PM</p>
+                        <h5>0769985475</h5>
+                        <p>Monday to Friday, 10AM to 3PM</p>
                     </span>
                 </div>
                 <div>
                     <i class="fa fa-envelope-o"></i>
                     <span>
-                        <h5>info@easytutorialspro.com</h5>
+                        <h5>contact@dlms.lk</h5>
                         <p>Email us your query</p>
                     </span>
                 </div>

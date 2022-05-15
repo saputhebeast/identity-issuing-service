@@ -431,11 +431,18 @@ h2{
 
 .contact-col input, textarea{
     width: 100%;
+    background-color: rgba(255, 255, 255, .15);  
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, .1);
     padding: 15px;
     margin-bottom: 17px;
-    outline: none;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contact-col textarea{
+    resize: none;
 }
 
 /* remove a default styles */
