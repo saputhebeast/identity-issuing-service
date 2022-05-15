@@ -18,7 +18,6 @@
                     <li><a href="../index.php#services">SERVICES</a></li>
                     <li><a href="./dlms-about.php">ABOUT</a></li>
                     <li><a href="./dlms-course.php">COURSE</a></li>
-                    <li><a href="./dlms-blog.php">BLOG</a></li>
                     <li><a href="./dlms-contact.php">CONTACT</a></li>
                     <li><a href="../index.php#course">LOGIN</a></li>
                 </ul>
