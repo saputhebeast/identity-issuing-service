@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2022 at 09:31 AM
+-- Generation Time: May 15, 2022 at 09:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -32,7 +32,7 @@ CREATE TABLE `driving_school` (
   `school_name` varchar(20) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
-  'contact' varchar(10),
+  `contact` varchar(12) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,10 +41,9 @@ CREATE TABLE `driving_school` (
 -- Dumping data for table `driving_school`
 --
 
-INSERT INTO `driving_school` (`school_id`, `school_name`, `email`, `address`, `password`, `description`) VALUES
-(2, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '$2y$10$NXpSvu914D/icYXDt3dU1eCd12MJ4niK96mvy/NAY3ef1/zFQy26K', '-'),
-(4, 'dlms', 'dlms@gmail.com', '-', '$2y$10$WYv4pUYGaut8JyZ8Zw/j3OlkyD754LsGBYlfWlcpLVtz6OTfJXEX2', '-'),
-(5, 'colombo learners', 'colombolearners@gmail.com', '-', '$2y$10$2L/aTvsXwwhVG55QI0kQ5eR4uOuIdAk97ciKm.Pjurjw53wdbZu0e', '-');
+INSERT INTO `driving_school` (`school_id`, `school_name`, `email`, `address`, `contact`, `password`, `description`) VALUES
+(6, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '0784569874', '$2y$10$bLvqNCOq8/b8eYQsyvz/3.32IIh8Pg.knXKdDxXWmy0FzqhqYSb4.', '-'),
+(12, 'Colombo Learners', 'colombo@gmail.com', '-', '785462514', '$2y$10$5J0rrRNYydJkUmchcAgSGe05PQI2AMycXwRcRE1alI4b5ixTKHk.i', '-');
 
 -- --------------------------------------------------------
 
@@ -58,16 +57,20 @@ CREATE TABLE `package` (
   `package_name` varchar(100) DEFAULT NULL,
   `package_price` int(11) DEFAULT NULL,
   `description` varchar(300) DEFAULT NULL,
-  `duration` varchar(10) DEFAULT NULL
+  `duration` varchar(10) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `package`
 --
 
-INSERT INTO `package` (`package_id`, `school_id`, `package_name`, `package_price`, `description`, `duration`) VALUES
-(2, 2, 'Heavy weight vehicles', 30000, 'Full Practice', '3 months'),
-(4, 2, 'Light weight vehicles manual + motor cycle + Three wheeler', 24000, 'Full Practice without the moto cycle and three wheeler', '4 months');
+INSERT INTO `package` (`package_id`, `school_id`, `package_name`, `package_price`, `description`, `duration`, `image`) VALUES
+(21, 6, 'Light Weight Vehicles Manual + Three Wheeler', 21000, 'Full Practice without the Three wheeler', '2 months', '../images/driving-school/Light_weight_vehicles_manual_Three_wheeler.png'),
+(22, 6, 'Heavy weight vehicles', 25000, 'Full Practice', '3 months', '../images/driving-school/Heavy_weight_vehicles.jpg'),
+(23, 6, 'Motor Cycle', 15000, 'Full Practice', '2 months', '../images/driving-school/Motor_Cycle.jpg'),
+(24, 6, 'Light weight vehicles manual+ motor cycle', 25000, 'Full Practice without the motor cycle.', '3 months', '../images/driving-school/Light_weight_vehicles_manual_motor_cycle.jpg'),
+(26, 12, 'Heavy weight vehicles', 25000, 'lorem lorem lorem lorem lorem', '2 months', '../images/driving-school/GPA_GRADE.PNG');
 
 --
 -- Indexes for dumped tables
@@ -94,13 +97,13 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT for table `driving_school`
 --
 ALTER TABLE `driving_school`
-  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
