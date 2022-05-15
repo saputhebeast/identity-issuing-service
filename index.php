@@ -34,21 +34,21 @@
         </div>
     </section>
 
-    <!-- courses -->
-    <section class="course" id="course">
+    <!-- log in -->
+    <section class="log" id="log">
         <h1>Log In to the System</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptas natus excepturi dolor, velit omnis officia magni incidunt iste molestias blanditiis, eum inventore reiciendis quas, perspiciatis deserunt fugiat iusto expedita?</p>
 
         <div class="row">
-            <div class="course-col">
+            <div class="log-col">
                 <h2><a href="./php/user.php" class="underline-animation a-remove">User Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
-            <div class="course-col">
+            <div class="log-col">
                 <h2><a href="./php/admin.php" class="underline-animation a-remove">Admin Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>
-            <div class="course-col">
+            <div class="log-col">
                 <h2><a href="./php/driving-school.php" class="underline-animation a-remove">School Login</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
             </div>

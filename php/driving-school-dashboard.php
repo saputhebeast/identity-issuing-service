@@ -1,5 +1,6 @@
 <?php
     include '../includes/remove-session.php';
+    include '../includes/config.php';
     if(isset($_SESSION['school_id'])){
 ?>
 <!DOCTYPE HTML>
@@ -18,23 +19,44 @@
         <div class="row">
             <div class="column column-1">
                 <div class="content">
-                    <i class="fa-solid fa-users fa-4x"></i>
-                    <h1>Registered Users Count</h1>
-                    <h2 id="count">56</h2>
+                    <i class="fa-solid fa-book fa-4x"></i>
+                    <h1>Listed Package Count</h1>
+                    <?php 
+                        $sql = "SELECT * FROM Package WHERE school_id = '$_SESSION[school_id]'";
+                        $result = $conn->query($sql);
+                        $packageCount = $result->num_rows;
+                    ?>
+                    <h2 id="count"><?php echo $packageCount ?></h2>
                 </div>
             </div>
             <div class="column column-2">
                 <div class="content">
-                    <i class="fa-solid fa-book fa-4x"></i>
-                    <h1>Listed Courses Count</h1>
-                    <h2 id="count">6</h2>
+                    <i class="fa-solid fa-line-chart fa-4x"></i>
+                    <h1>Highest Priced Course</h1>
+                    <?php 
+                        $sql = "SELECT MAX(package_price) AS 'max' FROM Package WHERE school_id = '$_SESSION[school_id]'";
+                        $result = $conn->query($sql);
+                        if($result->num_rows > 0 && !empty($result)){
+                            $data = $result->fetch_assoc();
+                            $maxPackage = $data['max'];
+                        }
+                    ?>
+                    <h2 id="count">LKR: <?php echo number_format($maxPackage) ?></h2>
                 </div>
             </div>
             <div class="column column-3">
                 <div class="content">
-                    <i class="fa-solid fa-ban fa-4x"></i>
-                    <h1>Unpublished Courses Count</h1>
-                    <h2 id="count">2</h2>
+                    <i class="fa-solid fa-calculator fa-4x"></i>
+                    <h1>Average Course Price</h1>
+                    <?php 
+                        $sql = "SELECT AVG(package_price) AS 'avg' FROM Package WHERE school_id = '$_SESSION[school_id]'";
+                        $result = $conn->query($sql);
+                        if($result->num_rows > 0 && !empty($result)){
+                            $data = $result->fetch_assoc();
+                            $avgPackage = $data['avg'];
+                        }
+                    ?>
+                    <h2 id="count">LKR: <?php echo number_format($avgPackage) ?></h2>
                 </div>
             </div>
         </div>
@@ -49,7 +71,7 @@
             <div class="column column-5">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-gear fa-2x"></i>
-                    <h1><a href="./driving-school-registered-user-manage.php" class="underline-animation">Registered User Manage</a></h1>
+                    <h1><a href="./driving-school-profile-settings.php" class="underline-animation">Update Profile Details</a></h1>
                 </div>
             </div>
             <div class="column column-6">

@@ -103,8 +103,8 @@ nav .fa{
     display: none;
 }
 
-/* course */
-.course{
+/* log in*/
+.log{
     width: 80%;
     margin: auto;
     text-align: center;
@@ -130,7 +130,7 @@ p{
     justify-content: space-between;
 }
 
-.course-col{
+.log-col{
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
@@ -146,7 +146,7 @@ h2{
     margin: 10px 0;
 }
 
-.course-col:hover{
+.log-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -449,4 +449,104 @@ h2{
 .a-remove{
     color: black;
     text-decoration: none;
+}
+
+/* course */
+.course{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.course-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, .15);  
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0,0,0,0.25), -2px -2px 10px 5px rgba(128, 125, 125, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.course-row:hover{
+    transform: scale(0.99, 0.99);
+    box-shadow: 4px 4px 20px 10px rgba(0,0,0,0.25), -4px -4px 20px 10px rgba(128, 125, 125, 0.22);
+}
+
+.course-col{
+    margin: 30px;
+    flex-basis: 50%;
+}
+
+.course-col img{
+    width: 80%;
+    height: 80%;
+}
+
+.course-p{
+    text-align: left;
+    padding: 0;
+}
+
+.course-h1{
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.course-h3{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text-container p{
+    margin-left: 50px;
+}
+
+.course-heading-about{
+    text-align: center;
+}
+
+/* search */
+.search{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.search-text{
+    float: left;
+    width: 85%;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.course-search-btn{
+    float: right;
+    width: 15%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.search-text, .course-search-btn{
+    background-color: rgba(255, 255, 255, .15);  
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, .1);
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fa-search{
+    color: red;
+}
+
+/* center place holder values in search bar */
+.search-text::placeholder{
+    padding-left: 20px;
 }
