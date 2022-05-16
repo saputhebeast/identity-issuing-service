@@ -21,7 +21,7 @@
                     <li><a href="./dlms-about.php">ABOUT</a></li>
                     <li><a href="./dlms-course.php">COURSE</a></li>
                     <li><a href="./dlms-contact.php">CONTACT</a></li>
-                    <li><a href="../index.php#course">LOGIN</a></li>
+                    <li><a href="../index.php#log">LOGIN</a></li>
                 </ul>
             </div>
         </nav>
