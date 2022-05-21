@@ -1,7 +1,7 @@
 <?php
     include '../includes/remove-session.php';
     require "../includes/config.php";
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['school_id'])){
         $id = $_SESSION['school_id'];
         $sql = "SELECT * FROM Driving_School WHERE school_id = '$id'";
         $result = $conn->query($sql);
