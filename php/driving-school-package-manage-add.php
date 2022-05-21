@@ -50,14 +50,25 @@
                     VALUES(DEFAULT, '$school_id', '$package_name', '$package_price', '$package_description', '$package_duration', '$target_file')";
                     
                     if($conn->query($sql) === TRUE){
-                        unset($_SESSION['image-or-not']);
-                        unset($_SESSION['image-type']);
-                        unset($_SESSION['image-exist']);
-                        unset($_SESSION['image-size']);
-                        unset($_SESSION['image-error']);
-
+                        if(isset($_SESSION['image-or-not'])){
+                            unset($_SESSION['image-or-not']);
+                        }
+                        if(isset($_SESSION['image-type'])){
+                            unset($_SESSION['image-type']);
+                        }
+                        if(isset($_SESSION['image-exist'])){
+                            unset($_SESSION['image-exist']);    
+                        }
+                        if(isset($_SESSION['image-size'])){
+                            unset($_SESSION['image-size']);    
+                        }
+                        if(isset($_SESSION['image-error'])){
+                            unset($_SESSION['image-error']);    
+                        }
+                        
                         echo "<script>alert('Package was added successfully!'); window.location = './driving-school-package-manage.php'</script>";
                     }else{
+                        unlink($target_file);
                         echo "<script>alert('Package was not added successfully!'); window.location = './driving-school-package-manage.php'</script>";
                     }
                 } else {

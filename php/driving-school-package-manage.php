@@ -99,6 +99,7 @@
                     ?>
                     <p class = "error-message" id = "error-upload"><?php echo $error ?></p>
                 </div>
+                <p class="note">Note: Add only JPG, JPEG, PNG file.</p>
                 <div class="second-row">
                     <input class="inputField btn" type="submit" value="Add Package" name = "btnAddPkg">
                 </div>
