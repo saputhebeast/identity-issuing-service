@@ -5,10 +5,12 @@
         unset($_SESSION['login-error']);
     }
 
+    // password change errors
     if(isset($_SESSION['change-pass-error'])){
         unset($_SESSION['change-pass-error']);
     }
 
+    // driving school course 
     if(isset($_SESSION['image-or-not'])){
         unset($_SESSION['image-or-not']);
     }
@@ -27,5 +29,19 @@
 
     if(isset($_SESSION['image-error'])){
         unset($_SESSION['image-error']);
+    }
+
+    // license application errors
+    if(isset($_SESSION['photo-error'])){
+        unset($_SESSION['photo-error']);
+    }
+    if(isset($_SESSION['nic-error'])){
+        unset($_SESSION['nic-error']);
+    }
+    if(isset($_SESSION['birth-error'])){
+        unset($_SESSION['birth-error']);
+    }
+    if(isset($_SESSION['medical-error'])){
+        unset($_SESSION['medical-error']);
     }
 ?>
