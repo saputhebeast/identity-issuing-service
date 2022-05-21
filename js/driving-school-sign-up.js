@@ -83,7 +83,7 @@ function validateForm(){
 		schoolPhone.style.border = "1px solid red";
 		errorPhone.style.color = "red";
 		error = true;
-	}else if(phoneNumber.length != 10){
+	}else if(phoneNumber.length != 11){
 		errorPhone.innerHTML = "Invalid Phone Number!";
 		schoolPhone.style.border = "1px solid red";
 		errorPhone.style.color = "red";

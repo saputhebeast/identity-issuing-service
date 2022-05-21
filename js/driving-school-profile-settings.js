@@ -180,7 +180,7 @@ function validateUpdate(){
 		changePhone.style.border = "1px solid red";
 		messagePhone.style.color = "red";
 		error = true;
-	}else if(updatePhoneNumber.length != 10){
+	}else if(updatePhoneNumber.length != 11){
 		messagePhone.innerHTML = "Invalid Phone Number!";
 		changePhone.style.border = "1px solid red";
 		messagePhone.style.color = "red";
