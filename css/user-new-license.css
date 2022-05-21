@@ -1,0 +1,42 @@
+.license-view{
+    text-decoration: none;
+    color: #000000;
+}
+
+.license-view:hover{
+    color: #524f4f;
+}
+
+/* image add button */
+.inputFile2::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+.inputFile2::before {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, .15);  
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, .1);
+    border: none;
+    border-radius: 5px;
+	padding: 5px 8px;
+	outline: none;
+	cursor: pointer;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.file-photo::before{
+    content: 'Add Your Photo';
+}
+
+.file-nic::before{
+    content: 'Add NIC';
+}
+
+.file-birth::before{
+    content: 'Add Birth Certificate';
+}
+
+.file-medical::before{
+    content: 'Add Medical Report';
+}
