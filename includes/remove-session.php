@@ -44,4 +44,7 @@
     if(isset($_SESSION['medical-error'])){
         unset($_SESSION['medical-error']);
     }
+    if(isset($_SESSION['application-image-error'])){
+        unset($_SESSION['application-image-error']);
+    }
 ?>
