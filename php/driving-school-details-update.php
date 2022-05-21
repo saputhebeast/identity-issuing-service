@@ -18,7 +18,7 @@
                 echo "<script>alert('Profile details was not updated successfully!'); window.location = './driving-school-profile-settings.php'</script>";
             }
         }else{
-            header("Location: ./driving-school-profile-settings");
+            header("Location: ./driving-school-profile-settings.php");
         }
     }else{
         header("Location: ./driving-school.php");
