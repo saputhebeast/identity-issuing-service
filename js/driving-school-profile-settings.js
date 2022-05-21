@@ -74,7 +74,7 @@ function validatePassChangeForm(){
 		changeNewPass.style.border = "1px solid red";
 		messageNewPass.style.color = "red";
 		error = true;
-	} else{
+	}else{
 		messageNewPass.innerHTML = "";
 		changeNewPass.style.border = "1px solid green";
 		messageNewPass.style.color = "";
@@ -105,7 +105,7 @@ function validatePassChangeForm(){
         changeNewPass.style.border = "1px solid red";
         changeNewPassConfirm.style.border = "1px solid red";
 		error = true;
-	}else{
+	}else if((confirmPassword != "" && newPassword != "") && (confirmPassword === newPassword)){
 		messageNotSame.innerHTML = "";
         messageNotSame.style.color = "";
         changeNewPass.style.border = "1px solid green";
