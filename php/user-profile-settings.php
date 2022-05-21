@@ -2,12 +2,13 @@
     include '../includes/remove-session.php';
     require "../includes/config.php";
     if(isset($_SESSION['user_id'])){
-    //     $id = $_SESSION['school_id'];
-    //     $sql = "SELECT * FROM Driving_School WHERE school_id = '$id'";
-    //     $result = $conn->query($sql);
+        $id = $_SESSION['user_id'];
+        $sql = "SELECT * FROM User WHERE user_id = '$id'";
+        $result = $conn->query($sql);
         // no need to validate, if there is no user, can't log into the system
-        // $userData = $result->fetch_assoc();
+        $userData = $result->fetch_assoc();
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -24,14 +25,14 @@
     <div class="container" id="basic-information">
         <div class="setting-container">
             <h1 class="dashboard-table-heading">Basic Information</h1>
-            <form action = "" name = "update-account-form" onsubmit = "return validateUpdate();" method = "POST">
-				<input class="inputField" type = "text" placeholder = "Enter the user name" name = "user-name" id = "user-name" value=""/><br>
+            <form action = "./user-details-update.php" name = "update-account-form" onsubmit = "return validateUpdate();" method = "POST">
+				<input class="inputField" type = "text" placeholder = "Enter the user name" name = "user-name" id = "user-name" value="<?php echo $userData['name']; ?>"/><br>
 				<p class = "error-message" id="error-name"></p>
-                <input class="inputField"  type = "text" placeholder = "Enter the email address" name = "user-email" id = "user-email" value=""/><br>
+                <input class="inputField"  type = "text" placeholder = "Enter the email address" name = "user-email" id = "user-email" value="<?php echo $userData['email']; ?>"/><br>
 				<p class = "error-message" id="error-email"></p>
-                <input class="inputField"  type = "text" placeholder = "Enter the phone number" name = "phone-number" id = "phone-number" value=""/><br>
+                <input class="inputField"  type = "text" placeholder = "Enter the phone number" name = "phone-number" id = "phone-number" value="<?php echo $userData['contact'] + 0;?>"/><br>
                 <p class = "error-message" id="error-phone"></p>
-                <textarea class = "inputField" id = "user-address" rows="6" cols="50" placeholder="Enter the address" name = "user-address"></textarea><br>
+                <textarea class = "inputField" id = "user-address" rows="6" cols="50" placeholder="Enter the address" name = "user-address"><?php echo $userData['address']; ?></textarea><br>
 				<p class = "error-message" id="error-address"></p>
                 <input class="inputField btn"  type = "submit" value = "Update Profile" name="btnUpdate" />
 			</form>
