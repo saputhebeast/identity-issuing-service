@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2022 at 04:16 PM
+-- Generation Time: May 22, 2022 at 02:30 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -44,6 +44,25 @@ INSERT INTO `administrator` (`admin_id`, `username`, `password`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `application`
+--
+
+CREATE TABLE `application` (
+  `application_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `full_name` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `license_type` varchar(30) DEFAULT NULL,
+  `photo` varchar(100) DEFAULT NULL,
+  `nic` varchar(100) DEFAULT NULL,
+  `birth_certificate` varchar(100) DEFAULT NULL,
+  `medical_report` varchar(100) DEFAULT NULL,
+  `application_status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `driving_school`
 --
 
@@ -62,7 +81,23 @@ CREATE TABLE `driving_school` (
 --
 
 INSERT INTO `driving_school` (`school_id`, `school_name`, `email`, `address`, `contact`, `password`, `description`) VALUES
-(6, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '0784569874', '$2y$10$bLvqNCOq8/b8eYQsyvz/3.32IIh8Pg.knXKdDxXWmy0FzqhqYSb4.', '-');
+(6, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '94789956874', '$2y$10$bLvqNCOq8/b8eYQsyvz/3.32IIh8Pg.knXKdDxXWmy0FzqhqYSb4.', '-');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `license`
+--
+
+CREATE TABLE `license` (
+  `license_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `user_name` varchar(100) DEFAULT NULL,
+  `user_image` varchar(100) DEFAULT NULL,
+  `license_type` varchar(30) DEFAULT NULL,
+  `create_date` date DEFAULT NULL,
+  `expired_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -100,7 +135,7 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
-  `contact` varchar(10) DEFAULT NULL,
+  `contact` varchar(12) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -110,7 +145,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `name`, `email`, `contact`, `address`, `password`) VALUES
-(1, 'Peter Parker', 'peter@gmail.com', '789958745', 'No 91, kandy road, kelaniya.', '$2y$10$92hrIemzQkih6VgBUsBtvOTeLItj6Fc6OYdgwP6l7MedyYfl7HEnK');
+(1, 'Peter Parker', 'peter@gmail.com', '94789958745', 'No 23, Kandy Road, Kelaniya.', '$2y$10$WD7zaMVEPjZsCTdbk77EhujB58Qd8vwOBGwn7d72Q/JLpfUnyqpki');
 
 --
 -- Indexes for dumped tables
@@ -123,10 +158,24 @@ ALTER TABLE `administrator`
   ADD PRIMARY KEY (`admin_id`);
 
 --
+-- Indexes for table `application`
+--
+ALTER TABLE `application`
+  ADD PRIMARY KEY (`application_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `driving_school`
 --
 ALTER TABLE `driving_school`
   ADD PRIMARY KEY (`school_id`);
+
+--
+-- Indexes for table `license`
+--
+ALTER TABLE `license`
+  ADD PRIMARY KEY (`license_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `package`
@@ -152,16 +201,28 @@ ALTER TABLE `administrator`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `application`
+--
+ALTER TABLE `application`
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `driving_school`
 --
 ALTER TABLE `driving_school`
   MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `license`
+--
+ALTER TABLE `license`
+  MODIFY `license_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -172,6 +233,18 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `application`
+--
+ALTER TABLE `application`
+  ADD CONSTRAINT `application_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Constraints for table `license`
+--
+ALTER TABLE `license`
+  ADD CONSTRAINT `license_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `package`
