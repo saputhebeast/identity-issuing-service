@@ -41,7 +41,7 @@
     <!-- intro -->
     <section class="course">
         <h1>Driving License Management System</h1>
-        <p class="course-heading-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ab tenetur sequi, commodi necessitatibus hic ipsam soluta voluptate ad enim facere labore. Vitae cumque officia ratione vel neque velit saepe!</p>
+        <p class="course-heading-about">Most recomended all Driving schools in SriLanka are available in one place with a reliable service with affordable prices. All the Practice sessions and learning tututrials are conducted through this<br> Driving schools according to the standards.</p>
     </section>
 
     <!-- search box -->
