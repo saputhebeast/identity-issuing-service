@@ -53,7 +53,7 @@
             if($appResult->num_rows == 1){
     ?>
                 <div class = "container">
-                    <p class="alert alert-success">You already have a submitted application to get new license.<br> Once the application process is over, your new license will show.<br> You can check it from here <a href="user-view-license.php" class="license-view">View License</a></p>
+                    <p class="alert alert-success">You already have a submitted application to get new license.<br> Once the application process is over, your new license will show.<br> You can check it from here.</p>
                 </div>
     <?php
             }else{
