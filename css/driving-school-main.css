@@ -175,3 +175,8 @@ textarea{
     margin: 20px;
     margin-top: 0;
 }
+
+.a-remove{
+    text-decoration: none;
+    color: green;
+}
