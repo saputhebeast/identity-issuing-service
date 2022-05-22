@@ -9,3 +9,27 @@ The homepage displays login methods such as user login, admin login, and driving
 Admin user has control of all the functionalities in the system. He can examine all the ongoing changes in the system, and he/she can accept or reject them by checking with the system standards, rules, and regulations. For example, they can register a new user to obtain a new license by clarifying the user details or reject a learner’s company that is requesting the membership of DLMS with admin authority for their section. Moreover, they can update the system, record all the payment details and make reports of the information. After that admin can make further decisions by incorporating with other agents.
 
 Learner’s advertising admin is responsible for all the advertising purposes, mainly for leaner's advertisements and other essential advertisements related to the website. They are also eligible for student registrations for driving schools and make necessary payments from students known for driving school registrations. Also, they are responsible for scheduling the timetables for classes and publishing notices related to driving schools.
+
+
+# Login Credentials
+
+## user account
+peter@gmail.com 
+peter12345
+
+ameesha@gmail.com
+12345678
+
+dinithi@gmail.com
+12345678
+
+## admin
+admin@gmail.com 
+admin123
+
+## driving school
+rathnalearners@gmail.com 
+rathna12345
+
+sunshine@gmail.com
+sunshine123
