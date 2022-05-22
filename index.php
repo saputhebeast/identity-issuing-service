@@ -37,20 +37,20 @@
     <!-- log in -->
     <section class="log" id="log">
         <h1>Log In to the System</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptas natus excepturi dolor, velit omnis officia magni incidunt iste molestias blanditiis, eum inventore reiciendis quas, perspiciatis deserunt fugiat iusto expedita?</p>
+        <p>You can Log into the system according to your requirement and role using the below mentioned portals</p>
 
         <div class="row">
             <div class="log-col">
                 <h2><a href="./php/user.php" class="underline-animation a-remove">User Login</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
+                <p>Log into the system to discover our more services and get your work done easier and faster. </p>
             </div>
             <div class="log-col">
                 <h2><a href="./php/admin.php" class="underline-animation a-remove">Admin Login</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
+                <p>Admins who are part of our system who manages all the activities can log in through this portal.</p>
             </div>
             <div class="log-col">
                 <h2><a href="./php/driving-school.php" class="underline-animation a-remove">School Login</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt incidunt illum, quis minima culpa praesentium suscipit quaerat veritatis, officia a commodi sequi obcaecati nostrum fuga molestias quasi dolores eius.</p>
+                <p>Driving School Advertisers can login through this portal for their publication purposes. </p>
             </div>
         </div>
     </section>
@@ -58,7 +58,7 @@
     <!-- branch -->
     <section class="branch">
         <h1>OUR ISLAND WIDE BRANCHES</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo assumenda ducimus alias, rerum nobis doloribus eius reiciendis saepe magnam quasi ea ut corrupti enim pariatur sunt sint non dicta quidem!</p>
+        <p>Our highly active branches are located all over the country to make your work done efficiently.</p>
         
         <div class="row">
             <div class="branch-col">
@@ -85,10 +85,11 @@
     <!-- services -->
     <section class="services" id="services">
         <h1>OUR SERVICES</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi dignissimos sed laboriosam commodi consequuntur est aliquam accusamus? Quae dolorem harum at suscipit eius ex error labore dicta, velit cumque.</p>
+        <p>Multiple of servises are avaliable in our system mainly such as New License Registartion, License Renewal, Applying for Foriegn License etc according to your requirements. </p>
         <div class="row">
             <div class="services-col">
                 <img src="./images/home/service/new.jpg" alt="">
+<<<<<<< HEAD
                 <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Local License</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
             </div>
@@ -101,6 +102,20 @@
                 <img src="./images/home/service/foreign.jpg" alt="">
                 <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Foreign License</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
+=======
+                <h2><a href="" class="a-remove underline-animation">Local License</a></h2>
+                <p>If you haven't got your License yet register through new license registration and we will offer a faster and reliable service to obtain your license.</p>
+            </div>
+            <div class="services-col">
+                <img src="./images/home/service/renew.jpg" alt="">
+                <h2><a href="" class="a-remove underline-animation">Renew License</a></h2>
+                <p>If you want any renewal of your license register through License renewal and we will offer a faster and reliable service to renew your license. </p>
+            </div>
+            <div class="services-col">
+                <img src="./images/home/service/foreign.jpg" alt="">
+                <h2><a href="" class="a-remove underline-animation">Foreign License</a></h2>
+                <p>If you want to apply for foriegn license register through Foreign License and we will offer a faster and reliable service to obtain a foriegn license</p>
+>>>>>>> 3c86e1a34af2d4c7f70e4aa5b2936371369083ae
             </div>
         </div>
     </section>
@@ -108,7 +123,7 @@
     <!-- review -->
     <section class="review">
         <h1>What Our Customers Says</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad ipsam illum accusantium optio dolores earum laudantium ducimus magnam? Tempora quas reiciendis dolores voluptas ut aspernatur quia saepe sunt hic?</p>
+        <p>You can convey your honest opinions towards our services and if there are any suggestions for our improvments. </p>
         <div class="row">
             <div class="review-col">
                 <img src="./images/home/review/ameesha.jpg" alt="">
