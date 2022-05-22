@@ -89,33 +89,19 @@
         <div class="row">
             <div class="services-col">
                 <img src="./images/home/service/new.jpg" alt="">
-<<<<<<< HEAD
                 <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Local License</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
-            </div>
-            <div class="services-col">
-                <img src="./images/home/service/renew.jpg" alt="">
-                <h2><a href="./php/user-renew-license.php" class="a-remove underline-animation">Renew License</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
-            </div>
-            <div class="services-col">
-                <img src="./images/home/service/foreign.jpg" alt="">
-                <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Foreign License</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
-=======
-                <h2><a href="" class="a-remove underline-animation">Local License</a></h2>
                 <p>If you haven't got your License yet register through new license registration and we will offer a faster and reliable service to obtain your license.</p>
             </div>
             <div class="services-col">
                 <img src="./images/home/service/renew.jpg" alt="">
-                <h2><a href="" class="a-remove underline-animation">Renew License</a></h2>
+                <h2><a href="./php/user-renew-license.php" class="a-remove underline-animation">Renew License</a></h2>
                 <p>If you want any renewal of your license register through License renewal and we will offer a faster and reliable service to renew your license. </p>
             </div>
             <div class="services-col">
                 <img src="./images/home/service/foreign.jpg" alt="">
-                <h2><a href="" class="a-remove underline-animation">Foreign License</a></h2>
+                <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Foreign License</a></h2>
                 <p>If you want to apply for foriegn license register through Foreign License and we will offer a faster and reliable service to obtain a foriegn license</p>
->>>>>>> 3c86e1a34af2d4c7f70e4aa5b2936371369083ae
+
             </div>
         </div>
     </section>
