@@ -32,7 +32,7 @@
             <h1>Your License</h1>
             <div class="container-inner">
                 <div class="center">
-                    <img src="../images/user/applications/photo.jpg" alt="">
+                    <img src="<?php echo $data['user_image'] ?>" alt="">
                 </div>
                 <div class="inner-text">
                     <p>Full Name: <?php echo $data['user_name'] ?></p>

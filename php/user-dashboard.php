@@ -26,8 +26,12 @@
                     <?php 
                         $sql1 = "SELECT * FROM Application WHERE user_id = '$id'";
                         $result1 = $conn->query($sql1);
-                        $data1 = $result1->fetch_assoc();
-                        $application_status = $data1['application_status'];
+                        if($result1->num_rows == 1){
+                            $data1 = $result1->fetch_assoc();
+                            $application_status = $data1['application_status'];
+                        }else{
+                            $application_status = "-";
+                        }
                     ?>
                     <i class="fa-solid fa-users fa-4x"></i>
                     <h1>Application Status</h1>
