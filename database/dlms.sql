@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 05:37 PM
+-- Generation Time: May 22, 2022 at 07:03 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -65,7 +65,8 @@ CREATE TABLE `application` (
 --
 
 INSERT INTO `application` (`application_id`, `user_id`, `full_name`, `address`, `license_type`, `photo`, `nic`, `birth_certificate`, `medical_report`, `application_status`) VALUES
-(7, 1, 'Peter Don Parker', 'No 43, Kandy Road, Colombo 10.', 'Heavy and Light Vehicle', '../images/user/applications/photo1.jpg', '../images/user/applications/nic1.pdf', '../images/user/applications/birth1.pdf', '../images/user/applications/medical1.pdf', 'Success');
+(7, 1, 'Peter Don Parker', 'No 43, Kandy Road, Colombo 10.', 'Heavy and Light Vehicle', '../images/user/applications/photo1.jpg', '../images/user/applications/nic1.pdf', '../images/user/applications/birth1.pdf', '../images/user/applications/medical1.pdf', 'Success'),
+(10, 4, 'Ameesha Akalanka Perera', 'No 41, Kandy road, Kadawatha.', 'Heavy Vehicle', '../images/user/applications/photo2.jpg', '../images/user/applications/nic2.pdf', '../images/user/applications/birth2.pdf', '../images/user/applications/medical2.pdf', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ CREATE TABLE `driving_school` (
 --
 
 INSERT INTO `driving_school` (`school_id`, `school_name`, `email`, `address`, `contact`, `password`, `description`) VALUES
-(6, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '94789956874', '$2y$10$bLvqNCOq8/b8eYQsyvz/3.32IIh8Pg.knXKdDxXWmy0FzqhqYSb4.', '-');
+(6, 'Rathna Learners', 'rathnalearners@gmail.com', '-', '94789956874', '$2y$10$bLvqNCOq8/b8eYQsyvz/3.32IIh8Pg.knXKdDxXWmy0FzqhqYSb4.', '-'),
+(14, 'Sun Shine Learners', 'sunshine@gmail.com', '-', '94117845695', '$2y$10$WZQg5z/bSAAcoIuPumkpwuPRAVRfbb0W2QNPYgcaAqjyJhP1qpt5C', '-');
 
 -- --------------------------------------------------------
 
@@ -159,7 +161,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `name`, `email`, `contact`, `address`, `password`) VALUES
-(1, 'Peter Parker', 'peter@gmail.com', '94789958745', 'No 23, Kandy Road, Kelaniya.', '$2y$10$WD7zaMVEPjZsCTdbk77EhujB58Qd8vwOBGwn7d72Q/JLpfUnyqpki');
+(1, 'Peter Parker', 'peter@gmail.com', '94789958745', 'No 23, Kandy Road, Kelaniya.', '$2y$10$WD7zaMVEPjZsCTdbk77EhujB58Qd8vwOBGwn7d72Q/JLpfUnyqpki'),
+(4, 'Ameesha Akalanka', 'ameesha@gmail.com', '94789956874', 'No 41, Kandy road, Kadawatha.', '$2y$10$hQm4LNlDV37JediJGt4Er.Wf9No.hMIlzgxMz6x9g0LfwKsy0.ElG'),
+(5, 'Dinithi Thathsarani', 'dinithi@gmail.com', '94795569874', 'No 98, Malabe, Sri Lanka.', '$2y$10$scbM8usehsZEP9uYEp2zOOdJg2fh0VIWj9o7LJcorQif/8n0x7P2a');
 
 --
 -- Indexes for dumped tables
@@ -218,13 +222,13 @@ ALTER TABLE `administrator`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `driving_school`
 --
 ALTER TABLE `driving_school`
-  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `license`
@@ -242,7 +246,7 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
