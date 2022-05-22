@@ -42,12 +42,12 @@
                         while($row = $result->fetch_assoc()){
                     ?>
                     <tr>
-                        <td><?php echo $row['full_name'];?></td>
-                        <td><?php echo $row['address'] ?></td>
-                        <td><?php echo $row['license_type'] ?></td>
+                        <td><?php echo $row['full_name']?></td>
+                        <td><?php echo $row['address']?></td>
+                        <td><?php echo $row['license_type']?></td>
                         <td>
                             <form action="./admin-license-application-view.php?application_id=<?php echo $row['application_id'] ?>" method="POST">
-                                <input class="a-btn btn-warning" type="submit" value="View Full Application" name = "btnEdit">
+                                <input class="a-btn btn-warning" type="submit" value="View Full Application" name = "btnView">
                             </form>
                         </td>
                     </tr>
@@ -83,7 +83,7 @@
                         while($row = $result->fetch_assoc()){
                     ?>
                     <tr>
-                        <td><<?php echo $row['full_name'];?></td>
+                        <td><?php echo $row['full_name'];?></td>
                         <td><?php echo $row['address'] ?></td>
                         <td><?php echo $row['license_type'] ?></td>
                         <td>

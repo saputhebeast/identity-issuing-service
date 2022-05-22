@@ -59,9 +59,6 @@
                     </tr>
                 </tbody>
             </table>
-            <form class="application_edit" action="" method="POST">
-                <input class = "inputField btn-danger" type="submit" value="Edit Application">
-            </form>
             <?php
                 }
             ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 02:30 PM
+-- Generation Time: May 22, 2022 at 05:37 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -39,7 +39,7 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`admin_id`, `username`, `password`, `email`) VALUES
-(2, 'admin', '$2y$10$ETXn4E9C7bJWl1ZeRIsLQO74Cw2Jo.WojESGxfDRzaLIvOMnwO99G', 'admin@gmail.com');
+(2, 'admin', '$2y$10$ekYA7r2nxAWV1DNQQ/qVr.7cqi/hWinJFFczHnl76LnvLDmdoy/uW', 'admin@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -59,6 +59,13 @@ CREATE TABLE `application` (
   `medical_report` varchar(100) DEFAULT NULL,
   `application_status` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `application`
+--
+
+INSERT INTO `application` (`application_id`, `user_id`, `full_name`, `address`, `license_type`, `photo`, `nic`, `birth_certificate`, `medical_report`, `application_status`) VALUES
+(7, 1, 'Peter Don Parker', 'No 43, Kandy Road, Colombo 10.', 'Heavy and Light Vehicle', '../images/user/applications/photo1.jpg', '../images/user/applications/nic1.pdf', '../images/user/applications/birth1.pdf', '../images/user/applications/medical1.pdf', 'Success');
 
 -- --------------------------------------------------------
 
@@ -98,6 +105,13 @@ CREATE TABLE `license` (
   `create_date` date DEFAULT NULL,
   `expired_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `license`
+--
+
+INSERT INTO `license` (`license_id`, `user_id`, `user_name`, `user_image`, `license_type`, `create_date`, `expired_date`) VALUES
+(11, 1, 'Peter Don Parker', '../images/user/applications/photo1.jpg', 'Heavy and Light Vehicle', '2022-05-22', '2023-05-22');
 
 -- --------------------------------------------------------
 
@@ -204,19 +218,19 @@ ALTER TABLE `administrator`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `application_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `driving_school`
 --
 ALTER TABLE `driving_school`
-  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `school_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `license`
 --
 ALTER TABLE `license`
-  MODIFY `license_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `license_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `package`
@@ -228,7 +242,7 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

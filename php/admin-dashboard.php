@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require "../includes/config.php";
     if(isset($_SESSION['admin_id'])){
 ?>
 <!DOCTYPE HTML>
@@ -22,23 +23,50 @@
         <div class="row">
             <div class="column column-1">
                 <div class="content">
+                    <?php
+                        $sql1 = "SELECT * FROM User";
+                        $result1 = $conn->query($sql1);
+                        if($result1->num_rows != 0){
+                            $userCount = $result1->num_rows;
+                        }else{
+                            $userCount = 0;
+                        }
+                    ?>
                     <i class="fa-solid fa-users fa-4x"></i>
                     <h1>Registered Users Count</h1>
-                    <h2 id="count">56</h2>
+                    <h2 id="count"><?php echo $userCount ?></h2>
                 </div>
             </div>
             <div class="column column-2">
                 <div class="content">
+                    <?php
+                        $sql2 = "SELECT * FROM Package";
+                        $result2 = $conn->query($sql2);
+                        if($result2->num_rows != 0){
+                            $packageCount = $result2->num_rows;
+                        }else{
+                            $packageCount = 0;
+                        }
+                    ?>
                     <i class="fa-solid fa-book fa-4x"></i>
                     <h1>Listed Courses Count</h1>
-                    <h2 id="count">6</h2>
+                    <h2 id="count"><?php echo $packageCount ?></h2>
                 </div>
             </div>
             <div class="column column-3">
                 <div class="content">
-                    <i class="fa-solid fa-ban fa-4x"></i>
-                    <h1>Unpublished Courses Count</h1>
-                    <h2 id="count">2</h2>
+                    <?php
+                        $sql3 = "SELECT * FROM Application WHERE application_status = 'Pending'";
+                        $result3 = $conn->query($sql3);
+                        if($result3->num_rows != 0){
+                            $pending = $result3->num_rows;
+                        }else{
+                            $pending = 0;
+                        }
+                    ?>
+                    <i class="fa-solid fa-pause fa-4x"></i>
+                    <h1>Pending Applications</h1>
+                    <h2 id="count"><?php echo $pending ?></h2>
                 </div>
             </div>
         </div>

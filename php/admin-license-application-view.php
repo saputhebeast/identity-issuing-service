@@ -2,7 +2,8 @@
     session_start();
     require "../includes/config.php";
     if(isset($_SESSION['admin_id'])){
-        $application_id = $_GET['application_id'];
+        if($_POST['btnView']){
+            $application_id = $_GET['application_id'];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -59,8 +60,9 @@
                     </tr>
                 </tbody>
             </table>
-            <form class="application_edit" action="" method="POST">
-                <input class = "inputField btn-danger" type="submit" value="Edit Application">
+            <form class="application_edit" action="./admin-license-application-delete.php" method="POST">
+                <input type="hidden" value="<?php echo $application_id ?>" name="application_id">
+                <input class = "inputField btn-danger" type="submit" value="Delete Application" name="deleteApplicationBtn">
             </form>
             <?php
                 }
@@ -79,7 +81,10 @@
     </div>
 </body>
 </html>
-<?php   
+<?php
+        }else{
+            header('Location: ./admin-dashboard.php');
+        }   
     }else{
         header('Location: ./admin.php');
     }
