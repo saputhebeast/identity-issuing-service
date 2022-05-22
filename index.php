@@ -64,7 +64,7 @@
             <div class="branch-col">
                 <img src="./images/home/branch/colombo.jpg" alt="">
                 <div class="layer">
-                    <h3>Colombo</h3>
+                    <h3>COLOMBO</h3>
                 </div>
             </div>
             <div class="branch-col">
@@ -89,17 +89,17 @@
         <div class="row">
             <div class="services-col">
                 <img src="./images/home/service/new.jpg" alt="">
-                <h2><a href="" class="a-remove underline-animation">Local License</a></h2>
+                <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Local License</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
             </div>
             <div class="services-col">
                 <img src="./images/home/service/renew.jpg" alt="">
-                <h2><a href="" class="a-remove underline-animation">Renew License</a></h2>
+                <h2><a href="./php/user-renew-license.php" class="a-remove underline-animation">Renew License</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
             </div>
             <div class="services-col">
                 <img src="./images/home/service/foreign.jpg" alt="">
-                <h2><a href="" class="a-remove underline-animation">Foreign License</a></h2>
+                <h2><a href="./php/user-new-license.php" class="a-remove underline-animation">Foreign License</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat iure dicta in quae. Reprehenderit repellendus dolores deserunt maxime, cupiditate molestiae aspernatur, provident possimus neque in praesentium quam, repudiandae dicta.</p>
             </div>
         </div>
