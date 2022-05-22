@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../includes/config.php";
     if(isset($_SESSION['user_id'])){
 ?>
 <!DOCTYPE HTML>
@@ -19,10 +20,35 @@
         user navigation
     -->
     <?php include '../includes/user-navigation.php'?>
+    
+    <!-- check is user already have submitted a form or not -->
+    <?php 
+        $id = $_SESSION['user_id'];
+        $sql = "SELECT * FROM Application WHERE user_id = '$id'";
+        $result = $conn->query($sql);
+        if($result->num_rows == 1){
+            $data = $result->fetch_assoc();
+    ?>
     <div class = "container">
-        <p class="alert alert-success">You already have a submitted application to get new license.<br> Once the application process is over, your new license will show.<br> You can check it from here <a href="user-license.php" class="license-view">View License</a></p>
+        <p class="alert alert-success">You already have a submitted application to get new license.<br> Once the application process is over, your new license will show.<br> You can check it from here.</p>
+        <a href="" class="license-view"></a>
+        <div class="buttons">
+            <form action="./user-view-license.php" method="POST">
+                <input class = "inputField btn" id = "renew" type="submit" value="View License" name="viewLicenseBtn">
+            </form>
+    <?php 
+            if($data['application_status'] == 'Pending'){
+    ?>
+            <form action="./user-delete-license-application.php" method="POST">
+                <input class = "inputField btn btn-danger" id = "renew" type="submit" value="Delete License Application" name="deleteAppBtn">
+            </form>
+    <?php }
+    ?>
+        </div> 
     </div>
-
+    <?php
+        }else{
+    ?>
     <div class="container">
     <h1 class="dashboard-table-heading">Apply for a New License</h1>
         <div class="add-package-container">
@@ -56,6 +82,9 @@
             </form>
         </div>
     </div>
+    <?php
+        }
+    ?>
     <script src="../js/user-new-license.js"></script>
 </body>
 </html>

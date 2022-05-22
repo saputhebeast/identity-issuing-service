@@ -65,8 +65,8 @@
                 // move the file
                 if ((move_uploaded_file($photo["tmp_name"], $photoFileName)) && (move_uploaded_file($nic["tmp_name"], $nicFileName)) && (move_uploaded_file($birthCertificate["tmp_name"], $birthCertificateFileName)) && (move_uploaded_file($medical["tmp_name"], $medicalFileName))) {
 
-                    $sql = "INSERT INTO Application(application_id, user_id, full_name, address, license_type, photo, nic, birth_certificate, medical_report) 
-                    VALUES(DEFAULT, '$user_id', '$name', '$address', '$type', '$photoFileName', '$nicFileName', '$birthCertificateFileName', '$medicalFileName')";
+                    $sql = "INSERT INTO Application(application_id, user_id, full_name, address, license_type, photo, nic, birth_certificate, medical_report, application_status) 
+                    VALUES(DEFAULT, '$user_id', '$name', '$address', '$type', '$photoFileName', '$nicFileName', '$birthCertificateFileName', '$medicalFileName', 'Pending')";
                     
                     if($conn->query($sql) === TRUE){
                         unset($_SESSION['photo-error']);

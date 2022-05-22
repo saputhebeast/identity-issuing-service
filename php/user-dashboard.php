@@ -1,6 +1,8 @@
 <?php
-    session_start();
+    include "../includes/remove-session.php";
+    include "../includes/config.php";
     if(isset($_SESSION['user_id'])){
+        $id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -21,44 +23,70 @@
         <div class="row">
             <div class="column column-1">
                 <div class="content">
+                    <?php 
+                        $sql1 = "SELECT * FROM Application WHERE user_id = '$id'";
+                        $result1 = $conn->query($sql1);
+                        $data1 = $result1->fetch_assoc();
+                        $application_status = $data1['application_status'];
+                    ?>
                     <i class="fa-solid fa-users fa-4x"></i>
-                    <h1>Registered Users Count</h1>
-                    <h2 id="count">56</h2>
+                    <h1>Application Status</h1>
+                    <h2 id="count"><?php echo $application_status?></h2>
                 </div>
             </div>
             <div class="column column-2">
                 <div class="content">
-                    <i class="fa-solid fa-book fa-4x"></i>
-                    <h1>Listed Courses Count</h1>
-                    <h2 id="count">6</h2>
+                    <?php 
+                        $sql2 = "SELECT * FROM Application WHERE user_id = '$id'";
+                        $result2 = $conn->query($sql2);
+                        if($result2->num_rows == 1){
+                            $data2 = $result2->fetch_assoc();
+                            $license_type = $data2['license_type'];
+                        }else{
+                            $license_type = "-";
+                        }
+                    ?>
+                    <i class="fa-solid fa-car fa-4x"></i>
+                    <h1>Vehicle Type</h1>
+                    <h2 id="count"><?php echo $license_type ?></h2>
                 </div>
             </div>
             <div class="column column-3">
                 <div class="content">
-                    <i class="fa-solid fa-ban fa-4x"></i>
-                    <h1>Unpublished Courses Count</h1>
-                    <h2 id="count">2</h2>
+                    <?php 
+                        $sql3 = "SELECT * FROM License WHERE user_id = '$id'";
+                        $result3 = $conn->query($sql3);
+                        if($result3->num_rows == 1){
+                            $data3 = $result3->fetch_assoc();
+                            $license_expire_date = $data3['expired_date'];
+                        }else{
+                            $license_expire_date = "-";
+                        }
+                    ?>
+                    <i class="fa-solid fa-exclamation-triangle fa-4x"></i>
+                    <h1>License Expiring Date</h1>
+                    <h2 id="count"><?php echo $license_expire_date ?></h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column column-4">
                 <div class="shortcut">
-                    <i class="fa-solid fa-box-archive fa-2x"></i>
+                    <i class="fa-solid fa-id-card fa-2x"></i>
                     <!-- https://www.30secondsofcode.org/css/s/hover-underline-animation -->
-                    <h1><a href="#" class="underline-animation">Package Manage</a></h1>
+                    <h1><a href="./user-new-license.php" class="underline-animation">New License</a></h1>
                 </div>
             </div>
             <div class="column column-5">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-gear fa-2x"></i>
-                    <h1><a href="#" class="underline-animation">Registered User Manage</a></h1>
+                    <h1><a href="./user-renew-license.php" class="underline-animation">Renew License</a></h1>
                 </div>
             </div>
             <div class="column column-6">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-pen fa-2x"></i>
-                    <h1><a href="#" class="underline-animation">Add Package</a></h1>
+                    <h1><a href="./user-view-license.php" class="underline-animation">View License</a></h1>
                 </div>
             </div>
         </div>
