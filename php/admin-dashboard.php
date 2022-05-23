@@ -75,19 +75,19 @@
                 <div class="shortcut">
                     <i class="fa-solid fa-box-archive fa-2x"></i>
                     <!-- https://www.30secondsofcode.org/css/s/hover-underline-animation -->
-                    <h1><a href="#" class="underline-animation">Package Manage</a></h1>
+                    <h1><a href="./admin-license-manage.php" class="underline-animation">Admin License Manage</a></h1>
                 </div>
             </div>
             <div class="column column-5">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-gear fa-2x"></i>
-                    <h1><a href="#" class="underline-animation">Registered User Manage</a></h1>
+                    <h1><a href="./admin-registered-user-manage.php" class="underline-animation">Registered User Manage</a></h1>
                 </div>
             </div>
             <div class="column column-6">
                 <div class="shortcut">
                     <i class="fa-solid fa-user-pen fa-2x"></i>
-                    <h1><a href="#" class="underline-animation">Add Package</a></h1>
+                    <h1><a href="./admin-driving-school-manage.php" class="underline-animation">Driving School Manage</a></h1>
                 </div>
             </div>
         </div>
