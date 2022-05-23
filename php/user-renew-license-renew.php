@@ -24,12 +24,6 @@
     <div class="container">
     <h1 class="dashboard-table-heading">License Renewal</h1>
         <div class="add-package-container">
-            <!-- 
-                default payment card details
-                card number: 4440648190661567
-                expire date: 10/27
-                cvv: 345
-            -->
             <p>You have to pay LKR: 2500.00 to renew for 1 year.</p><br>
             <form name = "license-renew-pay-form" action = "./user-license-renew-pay.php"  method = "POST" onsubmit = "return validateApplication();">
                 <div class="first-row">
