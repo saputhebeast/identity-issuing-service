@@ -23,7 +23,7 @@
                 unlink($medical_report);
                 echo "<script>alert('Application was deleted successfully!'); window.location = './user-new-license.php'</script>";
             }else{
-                echo "<script>alert('Application was deleted successfully!'); window.location = './user-new-license.php'</script>";
+                echo "<script>alert('Application was not deleted successfully!'); window.location = './user-new-license.php'</script>";
             }
         }else{
             header("Location: ./user-new-license.php");
